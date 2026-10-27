@@ -1,0 +1,4108 @@
+{
+ "name": "AIGRCeler regulatory map",
+ "version": "1.0",
+ "note": "How AIGRCeler covers ISO/IEC 42001:2023, the EU AI Act and the NIST AI RMF 1.0. Indicative pointers for traceability, not legal advice and not a statement that the company complies. Whether a duty applies is a question for counsel.",
+ "mechanisms": {
+  "workspace": "Company workspace: people, roles, authority basis, risk-acceptance thresholds, principles, company-level risks",
+  "stages": "Four stages (Discover, Assess, Govern, Operate); each starts by a named person's decision, the first three close at a gate, and the go decision in Operate is a named person's decision",
+  "lanes": "Three lanes scale the effort to the risk",
+  "journal": "Decision journal: hash-chained, decisions in the decision-maker's own words",
+  "risk": "Risk method: standard scenarios, inherent and residual ratings, credit only from verified controls, acceptance by threshold",
+  "catalog": "Control catalog owned by AI Governance: versions, proposals, release",
+  "evidence": "Evidence intake, analysis, strength and expiry",
+  "indicators": "Indicators with tolerances; credit suspended when out of tolerance",
+  "incidents": "Incident handling with response clocks, obligations and retrospectives",
+  "review": "Review stage: periodic and after-incident review, catalog improvement",
+  "profile": "Discovery profile: structured facts about the system, who said them and when",
+  "requests": "Requests to named people, one message per person, tracked until answered",
+  "views": "Generated views: accountability matrix, trust-property view, risk view, waiting view, regulatory view",
+  "launch": "Launch-status feed to the company's own pipeline",
+  "containment": "Containment actions and stage blocks for ongoing harm or a possible legal hard stop"
+ },
+ "frameworks": [
+  {
+   "id": "iso",
+   "name": "ISO/IEC 42001:2023",
+   "tag": "ISO 42001",
+   "items": [
+    {
+     "ref": "4.1",
+     "title": "Understanding the organization and its context",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-16"
+     ],
+     "mechanisms": [
+      "workspace",
+      "profile"
+     ],
+     "profile": [
+      "affected_people"
+     ],
+     "note": "External and internal issues are kept as company-level risks, per-system context notes and the charter's context section.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "4.2",
+     "title": "Needs and expectations of interested parties",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-15",
+      "GO-17"
+     ],
+     "mechanisms": [
+      "workspace",
+      "requests"
+     ],
+     "profile": [
+      "affected_people",
+      "affected_consulted"
+     ],
+     "note": "Interested parties are named in the charter and per system in the impact assessment; affected people are consulted under GO-15.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "4.3",
+     "title": "Scope of the AI management system",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-03"
+     ],
+     "mechanisms": [
+      "workspace",
+      "views"
+     ],
+     "profile": [
+      "purpose"
+     ],
+     "note": "Scope is the list of registered AI systems plus the charter's scope statement.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "4.4",
+     "title": "AI management system",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-01",
+      "GO-13"
+     ],
+     "mechanisms": [
+      "workspace",
+      "stages",
+      "catalog",
+      "journal",
+      "review"
+     ],
+     "profile": [],
+     "note": "AIGRCeler supplies the working management system (roles, stages, controls, records, review). Certification is a decision of an accredited body after audit of how the company operates it.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "5.1",
+     "title": "Leadership and commitment",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-01",
+      "GO-02",
+      "GO-07"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [],
+     "note": "Executive leadership accepts the highest residual risks and approves the principles; their acceptance is in the journal.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "5.2",
+     "title": "AI policy",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-02",
+      "GO-05"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "existing_policies"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "5.3",
+     "title": "Roles, responsibilities and authorities",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-01",
+      "GO-04"
+     ],
+     "mechanisms": [
+      "workspace",
+      "journal"
+     ],
+     "profile": [
+      "business_owner",
+      "oversight_owner"
+     ],
+     "note": "Roles carry named people, a start date and the basis of their authority; every decision names who made it and on what basis.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "6.1.1",
+     "title": "Actions to address risks and opportunities (general)",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-07",
+      "GO-16"
+     ],
+     "mechanisms": [
+      "risk",
+      "workspace"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "6.1.2",
+     "title": "AI risk assessment",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-07"
+     ],
+     "mechanisms": [
+      "risk",
+      "stages"
+     ],
+     "profile": [
+      "affected_people",
+      "worst_case",
+      "impact_level"
+     ],
+     "note": "Standard scenarios, rated before controls, scored in six dimensions, re-scored when facts or evidence change.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "6.1.3",
+     "title": "AI risk treatment",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-07",
+      "GO-14"
+     ],
+     "mechanisms": [
+      "risk",
+      "catalog",
+      "stages"
+     ],
+     "profile": [],
+     "note": "Controls are drafted from the risk, approved by AI Governance, and earn risk credit only when verified. Residual risk is accepted by a person with the right authority.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "6.1.4",
+     "title": "AI system impact assessment",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-17",
+      "GO-11",
+      "HR-09"
+     ],
+     "mechanisms": [
+      "profile",
+      "stages"
+     ],
+     "profile": [
+      "affected_people",
+      "vulnerable_groups",
+      "worst_case",
+      "societal_effect",
+      "safety_impact",
+      "impact_level"
+     ],
+     "note": "GO-17 is the impact assessment on individuals, groups and society; GO-11 adds fundamental rights where they are at stake; HR-09 covers safety.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "6.2",
+     "title": "AI objectives and planning to achieve them",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-02",
+      "GO-13"
+     ],
+     "mechanisms": [
+      "workspace",
+      "indicators",
+      "review"
+     ],
+     "profile": [],
+     "note": "Objectives sit in the principles statement and the charter; indicators and the annual review measure them.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "6.3",
+     "title": "Planning of changes",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-14",
+      "MD-12"
+     ],
+     "mechanisms": [
+      "catalog",
+      "stages"
+     ],
+     "profile": [
+      "change_process"
+     ],
+     "note": "Changes to a system need re-approval when they matter (GO-14); changes to the catalog go through proposals and a release decision.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "7.1",
+     "title": "Resources",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-01",
+      "GO-06",
+      "GO-16"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "resources"
+     ],
+     "note": "Roles and people are named; AI expertise and readiness are tracked as company-level risks.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "7.2",
+     "title": "Competence",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-06",
+      "HR-02"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "user_training"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "7.3",
+     "title": "Awareness",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-05",
+      "GO-06"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "7.4",
+     "title": "Communication",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-15",
+      "EA-09",
+      "HR-05"
+     ],
+     "mechanisms": [
+      "requests",
+      "views"
+     ],
+     "profile": [],
+     "note": "Messages to people are written in plain words, one per person, and tracked until answered.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "7.5",
+     "title": "Documented information",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "EA-01",
+      "EA-02",
+      "EA-03"
+     ],
+     "mechanisms": [
+      "journal",
+      "evidence",
+      "views"
+     ],
+     "profile": [],
+     "note": "Records are written by the engine, chained, and kept for the period the lane requires.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "8.1",
+     "title": "Operational planning and control",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "DO-12",
+      "GO-14"
+     ],
+     "mechanisms": [
+      "stages",
+      "lanes",
+      "launch"
+     ],
+     "profile": [
+      "lifecycle_stage",
+      "change_process"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "8.2",
+     "title": "AI risk assessment (operation)",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "DO-01",
+      "DO-16"
+     ],
+     "mechanisms": [
+      "risk",
+      "indicators"
+     ],
+     "profile": [],
+     "note": "Ratings are recomputed when evidence expires, a model version changes or an indicator leaves tolerance.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "8.3",
+     "title": "AI risk treatment (operation)",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "DO-07",
+      "EA-10"
+     ],
+     "mechanisms": [
+      "risk",
+      "incidents",
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "8.4",
+     "title": "AI system impact assessment (operation)",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-17",
+      "GO-11"
+     ],
+     "mechanisms": [
+      "stages",
+      "review"
+     ],
+     "profile": [
+      "societal_effect",
+      "prior_assessments"
+     ],
+     "note": "The impact assessment is repeated at review and when the use changes.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "9.1",
+     "title": "Monitoring, measurement, analysis and evaluation",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "DO-01",
+      "DO-02",
+      "DO-15",
+      "DO-16"
+     ],
+     "mechanisms": [
+      "indicators",
+      "views",
+      "review"
+     ],
+     "profile": [
+      "monitoring_now"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "9.2",
+     "title": "Internal audit",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "EA-05",
+      "EA-01"
+     ],
+     "mechanisms": [
+      "journal",
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "9.3",
+     "title": "Management review",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "GO-13"
+     ],
+     "mechanisms": [
+      "review",
+      "journal"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "10.1",
+     "title": "Continual improvement",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "EA-10",
+      "HR-11"
+     ],
+     "mechanisms": [
+      "review",
+      "catalog"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "10.2",
+     "title": "Nonconformity and corrective action",
+     "kind": "clause",
+     "status": "covered",
+     "controls": [
+      "DO-07",
+      "EA-10"
+     ],
+     "mechanisms": [
+      "incidents",
+      "review",
+      "evidence"
+     ],
+     "profile": [
+      "past_problems"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.2.2",
+     "title": "AI policy",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-02",
+      "GO-05"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "existing_policies"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.2.3",
+     "title": "Alignment with other organizational policies",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-02",
+      "GO-05",
+      "GO-12"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "existing_policies"
+     ],
+     "note": "GO-02 now requires the statement to say how it relates to security, privacy and ethics policies.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.2.4",
+     "title": "Review of the AI policy",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-02",
+      "GO-13"
+     ],
+     "mechanisms": [
+      "review"
+     ],
+     "profile": [],
+     "note": "GO-02 now requires a review date.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.3.2",
+     "title": "AI roles and responsibilities",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-01",
+      "GO-04"
+     ],
+     "mechanisms": [
+      "workspace",
+      "journal"
+     ],
+     "profile": [
+      "business_owner",
+      "technical_owner",
+      "oversight_owner"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.3.3",
+     "title": "Reporting of concerns",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-05",
+      "HR-08",
+      "HR-13"
+     ],
+     "mechanisms": [
+      "incidents"
+     ],
+     "profile": [
+      "incident_contact"
+     ],
+     "note": "GO-05 now requires staff to know how to raise a concern.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.4.2",
+     "title": "Resource documentation",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-03",
+      "EA-03"
+     ],
+     "mechanisms": [
+      "profile",
+      "views"
+     ],
+     "profile": [
+      "resources"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.4.3",
+     "title": "Data resources",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DG-01",
+      "DG-15"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "data_sources",
+      "data_origin"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.4.4",
+     "title": "Tooling resources",
+     "kind": "annex-a",
+     "status": "partial",
+     "controls": [
+      "MD-12",
+      "DO-11",
+      "TP-09"
+     ],
+     "mechanisms": [
+      "catalog"
+     ],
+     "profile": [
+      "technique"
+     ],
+     "note": "Tools are suggested in playbooks and their use is recorded as evidence. AIGRCeler does not inventory the company's tools itself.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.4.5",
+     "title": "System and computing resources",
+     "kind": "annex-a",
+     "status": "partial",
+     "controls": [
+      "DO-13",
+      "DO-10"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "hosting",
+      "resources"
+     ],
+     "note": "Recovery and dependencies are covered; capacity planning is the company's own engineering practice and is only recorded, not checked.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.4.6",
+     "title": "Human resources",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-06",
+      "HR-02"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "resources",
+      "user_training"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.5.2",
+     "title": "AI system impact assessment process",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-17"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "affected_people",
+      "worst_case"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.5.3",
+     "title": "Documentation of AI system impact assessments",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-17",
+      "EA-02"
+     ],
+     "mechanisms": [
+      "evidence",
+      "journal"
+     ],
+     "profile": [
+      "prior_assessments"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.5.4",
+     "title": "Assessing AI system impact on individuals or groups",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-17",
+      "GO-11",
+      "HR-10"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "affected_people",
+      "vulnerable_groups",
+      "worst_case"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.5.5",
+     "title": "Assessing societal impacts of AI systems",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-17"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "societal_effect"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.1.2",
+     "title": "Objectives for responsible development of AI system",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-02",
+      "MD-02"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "target_level"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.1.3",
+     "title": "Processes for responsible design and development",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "MD-01",
+      "MD-12",
+      "GO-14"
+     ],
+     "mechanisms": [
+      "catalog"
+     ],
+     "profile": [
+      "change_process"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.2.2",
+     "title": "AI system requirements and specification",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-08",
+      "MD-02"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "purpose",
+      "intended_use",
+      "target_level"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.2.3",
+     "title": "Documentation of AI system design and development",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "MD-01",
+      "MD-14",
+      "EA-03"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "technique",
+      "training_data"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.2.4",
+     "title": "AI system verification and validation",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "MD-03",
+      "MD-04",
+      "MD-05",
+      "MD-06",
+      "MD-07"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "test_results",
+      "bias_testing",
+      "adversarial_testing"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.2.5",
+     "title": "AI system deployment",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DO-12",
+      "GO-10",
+      "DO-13"
+     ],
+     "mechanisms": [
+      "launch",
+      "stages"
+     ],
+     "profile": [
+      "lifecycle_stage",
+      "approval_history"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.2.6",
+     "title": "AI system operation and monitoring",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DO-01",
+      "DO-02",
+      "DO-03",
+      "DO-16"
+     ],
+     "mechanisms": [
+      "indicators",
+      "incidents"
+     ],
+     "profile": [
+      "monitoring_now"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.2.7",
+     "title": "AI system technical documentation",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "EA-03",
+      "MD-01"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.6.2.8",
+     "title": "AI system recording of event logs",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DO-06",
+      "EA-04"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "logging"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.7.2",
+     "title": "Data for development and enhancement of AI system",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DG-01",
+      "DG-05"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "data_sources",
+      "training_data"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.7.3",
+     "title": "Acquisition of data",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DG-05",
+      "DG-02"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "data_origin",
+      "data_basis"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.7.4",
+     "title": "Quality of data for AI systems",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DG-06",
+      "DG-07"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "data_quality"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.7.5",
+     "title": "Data provenance",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DG-05",
+      "DG-15"
+     ],
+     "mechanisms": [
+      "profile",
+      "evidence"
+     ],
+     "profile": [
+      "data_origin",
+      "training_data"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.7.6",
+     "title": "Data preparation",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DG-06",
+      "DG-13"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "data_quality"
+     ],
+     "note": "DG-06 now includes cleaning and labelling steps.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.8.2",
+     "title": "System documentation and information for users",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "EA-09",
+      "HR-05",
+      "MD-01"
+     ],
+     "mechanisms": [
+      "views"
+     ],
+     "profile": [
+      "known_limits",
+      "ai_disclosure"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.8.3",
+     "title": "External reporting",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "EA-06",
+      "EA-08",
+      "DO-07"
+     ],
+     "mechanisms": [
+      "incidents"
+     ],
+     "profile": [
+      "incident_contact"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.8.4",
+     "title": "Communication of incidents",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "DO-07",
+      "EA-08",
+      "TP-13",
+      "HR-08"
+     ],
+     "mechanisms": [
+      "incidents",
+      "requests"
+     ],
+     "profile": [
+      "incident_contact"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.8.5",
+     "title": "Information for interested parties",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "EA-09",
+      "HR-04",
+      "HR-05"
+     ],
+     "mechanisms": [
+      "views"
+     ],
+     "profile": [
+      "ai_disclosure"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.9.2",
+     "title": "Processes for responsible use of AI systems",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-05",
+      "HR-01",
+      "GO-08"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "intended_use",
+      "human_review"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.9.3",
+     "title": "Objectives for responsible use of AI system",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-02",
+      "GO-08"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "intended_use"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.9.4",
+     "title": "Intended use of the AI system",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "GO-08",
+      "EA-09"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "intended_use",
+      "known_limits"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.10.2",
+     "title": "Allocating responsibilities",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "TP-11",
+      "TP-02"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "contracts"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.10.3",
+     "title": "Suppliers",
+     "kind": "annex-a",
+     "status": "covered",
+     "controls": [
+      "TP-01",
+      "TP-02",
+      "TP-03",
+      "TP-04",
+      "TP-05",
+      "TP-06",
+      "TP-07",
+      "TP-08",
+      "TP-09",
+      "TP-10",
+      "TP-12",
+      "TP-14"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "vendor_model",
+      "contracts",
+      "certifications"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "A.10.4",
+     "title": "Customers",
+     "kind": "annex-a",
+     "status": "partial",
+     "controls": [
+      "EA-09",
+      "HR-05"
+     ],
+     "mechanisms": [
+      "views"
+     ],
+     "profile": [],
+     "note": "Information for customers who receive the company's AI output is covered; responsibilities written into customer contracts are the company's legal work and are recorded only as evidence.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eu",
+   "name": "EU AI Act (Regulation (EU) 2024/1689)",
+   "tag": "EU AI Act",
+   "items": [
+    {
+     "ref": "Art. 4",
+     "title": "AI literacy",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-06",
+      "HR-02"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "user_training"
+     ],
+     "note": "",
+     "roles": [
+      "provider",
+      "deployer"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "Art. 5",
+     "title": "Prohibited AI practices",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-08"
+     ],
+     "mechanisms": [
+      "containment",
+      "stages"
+     ],
+     "profile": [
+      "intended_use",
+      "eu_class_view",
+      "counsel_asked"
+     ],
+     "note": "A possible prohibited use is raised at once, placed as a stage block, and put to counsel. AIGRCeler never states in its own voice that a use is lawful.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "Art. 6",
+     "title": "Classification rules for high-risk AI systems",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-09"
+     ],
+     "mechanisms": [
+      "profile",
+      "stages"
+     ],
+     "profile": [
+      "eu_nexus",
+      "eu_class_view",
+      "counsel_asked"
+     ],
+     "note": "Records the company's classification and the reasoning; counsel decides.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "Art. 8",
+     "title": "Compliance with the requirements for high-risk systems",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-10",
+      "GO-09"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 9",
+     "title": "Risk management system",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-07",
+      "GO-08",
+      "HR-09"
+     ],
+     "mechanisms": [
+      "risk",
+      "stages"
+     ],
+     "profile": [
+      "worst_case",
+      "impact_level"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 10",
+     "title": "Data and data governance",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "DG-01",
+      "DG-05",
+      "DG-06",
+      "DG-07",
+      "DG-09",
+      "DG-14",
+      "DG-15"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "data_sources",
+      "data_origin",
+      "data_quality",
+      "bias_testing"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 11",
+     "title": "Technical documentation",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "EA-03",
+      "MD-01",
+      "MD-14",
+      "DG-15"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 12",
+     "title": "Record-keeping",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "DO-06",
+      "EA-04",
+      "EA-01"
+     ],
+     "mechanisms": [
+      "evidence",
+      "journal"
+     ],
+     "profile": [
+      "logging"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 13",
+     "title": "Transparency and provision of information to deployers",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "EA-09",
+      "HR-05",
+      "TP-03"
+     ],
+     "mechanisms": [
+      "views"
+     ],
+     "profile": [
+      "known_limits",
+      "intended_use"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 14",
+     "title": "Human oversight",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "HR-01",
+      "HR-02",
+      "HR-03",
+      "DO-09",
+      "DO-14"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "human_review",
+      "autonomy",
+      "oversight_owner"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 15",
+     "title": "Accuracy, robustness and cybersecurity",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "MD-03",
+      "MD-06",
+      "MD-07",
+      "MD-08",
+      "MD-09",
+      "MD-10",
+      "DG-09",
+      "DO-03"
+     ],
+     "mechanisms": [
+      "evidence",
+      "indicators"
+     ],
+     "profile": [
+      "test_results",
+      "adversarial_testing",
+      "security_review"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 16",
+     "title": "Obligations of providers of high-risk AI systems",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-18",
+      "GO-10",
+      "EA-09"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "eu_role"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 17",
+     "title": "Quality management system",
+     "kind": "article",
+     "status": "partial",
+     "controls": [
+      "GO-01",
+      "DO-12",
+      "GO-07",
+      "DG-01",
+      "MD-12",
+      "EA-02"
+     ],
+     "mechanisms": [
+      "workspace",
+      "stages",
+      "catalog"
+     ],
+     "profile": [],
+     "note": "Covers accountability, risk management, data management, testing, record-keeping, change control and post-market monitoring. Not covered by the starter catalog: the list of harmonised standards applied, and written communication procedures with national authorities beyond incident and regulator readiness. Counsel decides what the company's QMS document must contain.",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 18",
+     "title": "Documentation keeping",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "EA-02"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 19",
+     "title": "Automatically generated logs",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "DO-06",
+      "EA-04"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "logging"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 20",
+     "title": "Corrective actions and duty of information",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-18",
+      "DO-07",
+      "EA-10"
+     ],
+     "mechanisms": [
+      "incidents"
+     ],
+     "profile": [
+      "incident_contact"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 21",
+     "title": "Cooperation with competent authorities",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-18",
+      "EA-06"
+     ],
+     "mechanisms": [
+      "incidents"
+     ],
+     "profile": [
+      "counsel_asked"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 22",
+     "title": "Authorised representatives of providers",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-18"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "eu_role"
+     ],
+     "note": "Applies when the provider is outside the EU; GO-18 asks whether a representative is needed and appointed.",
+     "roles": [
+      "provider",
+      "authorised-representative"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 23",
+     "title": "Obligations of importers",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-18"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "eu_role"
+     ],
+     "note": "",
+     "roles": [
+      "importer"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 24",
+     "title": "Obligations of distributors",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-18"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "eu_role"
+     ],
+     "note": "",
+     "roles": [
+      "distributor"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 25",
+     "title": "Responsibilities along the AI value chain",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "TP-02",
+      "TP-11"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "contracts",
+      "vendor_model"
+     ],
+     "note": "",
+     "roles": [
+      "provider",
+      "deployer",
+      "importer",
+      "distributor"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 26",
+     "title": "Obligations of deployers of high-risk AI systems",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "TP-05",
+      "HR-01",
+      "HR-02",
+      "HR-08",
+      "DO-06",
+      "EA-04",
+      "GO-05",
+      "GO-15"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "human_review",
+      "affected_consulted",
+      "oversight_owner"
+     ],
+     "note": "Includes informing workers or their representatives before a workplace deployment (GO-15) and human oversight by trained people (HR-01, HR-02).",
+     "roles": [
+      "deployer"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 27",
+     "title": "Fundamental rights impact assessment for deployers of high-risk AI systems",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-11",
+      "GO-17"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "affected_people",
+      "vulnerable_groups"
+     ],
+     "note": "Applies to public bodies and some private deployers; counsel confirms who must do it.",
+     "roles": [
+      "deployer"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 43",
+     "title": "Conformity assessment",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-10"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "eu_class_view"
+     ],
+     "note": "AIGRCeler tracks the steps and keeps the records; the assessment itself (internal control or a notified body) is performed outside it.",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 47",
+     "title": "EU declaration of conformity",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-10"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 48",
+     "title": "CE marking",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-18",
+      "GO-10"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 49",
+     "title": "Registration",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "GO-03",
+      "GO-10"
+     ],
+     "mechanisms": [
+      "views"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "provider",
+      "deployer"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 50",
+     "title": "Transparency obligations for providers and deployers of certain AI systems",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "HR-04",
+      "HR-05"
+     ],
+     "mechanisms": [
+      "views"
+     ],
+     "profile": [
+      "ai_disclosure",
+      "generative",
+      "customer_output"
+     ],
+     "note": "",
+     "roles": [
+      "provider",
+      "deployer"
+     ],
+     "classes": [
+      "limited",
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 51-55",
+     "title": "General-purpose AI models",
+     "kind": "article",
+     "status": "partial",
+     "controls": [
+      "TP-14",
+      "TP-03",
+      "TP-12"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "gpai",
+      "vendor_model"
+     ],
+     "note": "Covers the company as a user of a general-purpose model: it obtains the provider's documentation (TP-14). The duties of the provider of such a model are out of the starter catalog's scope; a company that itself places a general-purpose model on the market needs its own legal plan.",
+     "roles": [
+      "deployer",
+      "provider"
+     ],
+     "classes": [
+      "any"
+     ]
+    },
+    {
+     "ref": "Art. 72",
+     "title": "Post-market monitoring by providers",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "DO-01",
+      "DO-02",
+      "EA-07"
+     ],
+     "mechanisms": [
+      "indicators"
+     ],
+     "profile": [
+      "monitoring_now"
+     ],
+     "note": "",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 73",
+     "title": "Reporting of serious incidents",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "DO-07",
+      "EA-08",
+      "TP-13"
+     ],
+     "mechanisms": [
+      "incidents"
+     ],
+     "profile": [
+      "incident_contact",
+      "past_problems"
+     ],
+     "note": "Regulator notice periods are tracked as obligations with their own clocks.",
+     "roles": [
+      "provider"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    },
+    {
+     "ref": "Art. 86",
+     "title": "Right to explanation of individual decision-making",
+     "kind": "article",
+     "status": "covered",
+     "controls": [
+      "HR-06",
+      "MD-05"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "explainability",
+      "appeal_path"
+     ],
+     "note": "",
+     "roles": [
+      "deployer"
+     ],
+     "classes": [
+      "high-risk"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nist",
+   "name": "NIST AI Risk Management Framework 1.0",
+   "tag": "NIST AI RMF",
+   "items": [
+    {
+     "ref": "GOVERN 1.1",
+     "title": "Legal and regulatory requirements are understood, managed and documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-09",
+      "GO-12",
+      "EA-06"
+     ],
+     "mechanisms": [
+      "catalog",
+      "profile"
+     ],
+     "profile": [
+      "jurisdictions",
+      "regulated_sector",
+      "counsel_asked"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 1.2",
+     "title": "Trustworthy AI characteristics are integrated into policies and processes",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-02"
+     ],
+     "mechanisms": [
+      "views"
+     ],
+     "profile": [],
+     "note": "Every control carries trust-property tags; view 4 shows them.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 1.3",
+     "title": "Processes set the level of risk management by the organization's risk tolerance",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-07"
+     ],
+     "mechanisms": [
+      "lanes",
+      "workspace"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 1.4",
+     "title": "The risk management process is set through transparent policies and procedures",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-07",
+      "GO-02"
+     ],
+     "mechanisms": [
+      "journal"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 1.5",
+     "title": "Ongoing monitoring and periodic review of the risk management process",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-13",
+      "EA-05"
+     ],
+     "mechanisms": [
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 1.6",
+     "title": "Mechanisms inventory AI systems",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-03"
+     ],
+     "mechanisms": [
+      "views",
+      "profile"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 1.7",
+     "title": "Processes decommission and phase out AI systems safely",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-19"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "lifecycle_stage"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 2.1",
+     "title": "Roles, responsibilities and lines of communication are documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-01",
+      "GO-04"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "business_owner",
+      "technical_owner"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 2.2",
+     "title": "Personnel receive AI risk management training",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-06",
+      "HR-02"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "user_training"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 2.3",
+     "title": "Executive leadership takes responsibility for AI risk decisions",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-01",
+      "GO-07"
+     ],
+     "mechanisms": [
+      "workspace",
+      "journal"
+     ],
+     "profile": [],
+     "note": "Executive leadership accepts the highest residual risks.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 3.1",
+     "title": "Decision-making involves a diverse team",
+     "kind": "subcategory",
+     "status": "partial",
+     "controls": [
+      "GO-15",
+      "HR-10"
+     ],
+     "mechanisms": [
+      "workspace",
+      "requests"
+     ],
+     "profile": [],
+     "note": "Roles bring several functions to each system, and affected people are heard (GO-15). The make-up of the company's teams is the company's own matter and is not measured.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 3.2",
+     "title": "Policies define roles for human-AI configurations and oversight",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "HR-01",
+      "HR-03"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "human_review",
+      "autonomy"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 4.1",
+     "title": "Policies foster critical thinking and a safety-first mindset",
+     "kind": "subcategory",
+     "status": "partial",
+     "controls": [
+      "GO-02",
+      "GO-06",
+      "HR-03"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [],
+     "note": "Principles, training and screen design support it; culture itself is not something a control can prove.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 4.2",
+     "title": "Teams document and communicate risks and impacts",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-17",
+      "EA-03"
+     ],
+     "mechanisms": [
+      "views",
+      "risk"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 4.3",
+     "title": "Practices support testing, incident identification and information sharing",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-07",
+      "DO-08",
+      "MD-07",
+      "EA-10"
+     ],
+     "mechanisms": [
+      "incidents",
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 5.1",
+     "title": "Policies collect and consider input from external parties",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-15",
+      "HR-08"
+     ],
+     "mechanisms": [
+      "requests"
+     ],
+     "profile": [
+      "affected_consulted"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 5.2",
+     "title": "Mechanisms incorporate feedback into design and use",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "HR-11",
+      "GO-15"
+     ],
+     "mechanisms": [
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 6.1",
+     "title": "Policies address third-party risks, including intellectual property",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "TP-01",
+      "TP-02",
+      "TP-08"
+     ],
+     "mechanisms": [
+      "catalog"
+     ],
+     "profile": [
+      "licences",
+      "contracts"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "GOVERN 6.2",
+     "title": "Contingency processes handle third-party failures",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "TP-07",
+      "DO-13",
+      "TP-13"
+     ],
+     "mechanisms": [
+      "incidents"
+     ],
+     "profile": [
+      "fallback"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "GOVERN"
+    },
+    {
+     "ref": "MAP 1.1",
+     "title": "Intended purposes, context and applicable laws are understood",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-08",
+      "GO-09",
+      "GO-12"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "purpose",
+      "intended_use",
+      "jurisdictions"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 1.2",
+     "title": "Interdisciplinary actors are involved",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-15"
+     ],
+     "mechanisms": [
+      "workspace",
+      "requests"
+     ],
+     "profile": [],
+     "note": "Questions go to business, engineering, security, legal and operations roles; one message per person.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 1.3",
+     "title": "The organization's mission and goals for AI are understood",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-02"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 1.4",
+     "title": "The business value is defined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-08"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "business_value",
+      "purpose"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 1.5",
+     "title": "Organizational risk tolerances are determined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-07",
+      "GO-16"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [],
+     "note": "Thresholds say who may accept which residual level.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 1.6",
+     "title": "System requirements are elicited from stakeholders",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-15",
+      "HR-10"
+     ],
+     "mechanisms": [
+      "requests"
+     ],
+     "profile": [
+      "affected_consulted"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 2.1",
+     "title": "The tasks and methods the system supports are defined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-01"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "decisions_made",
+      "technique"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 2.2",
+     "title": "Knowledge limits and how people oversee the output are documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-01",
+      "EA-09",
+      "HR-05",
+      "HR-01"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "known_limits",
+      "human_review"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 2.3",
+     "title": "Scientific integrity and test, evaluation, verification and validation (TEVV) considerations are identified",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "MD-03"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "test_results",
+      "target_level"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 3.1",
+     "title": "Potential benefits are examined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-17"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "business_value"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 3.2",
+     "title": "Potential costs and negative impacts are examined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-17",
+      "HR-09"
+     ],
+     "mechanisms": [
+      "risk"
+     ],
+     "profile": [
+      "worst_case"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 3.3",
+     "title": "The targeted application scope is specified",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-08"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "intended_use"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 3.4",
+     "title": "Operator and practitioner proficiency is defined and assessed",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-06",
+      "HR-02"
+     ],
+     "mechanisms": [
+      "workspace"
+     ],
+     "profile": [
+      "user_training"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 3.5",
+     "title": "Human oversight processes are defined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "HR-01",
+      "HR-02"
+     ],
+     "mechanisms": [
+      "stages"
+     ],
+     "profile": [
+      "human_review",
+      "oversight_owner"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 4.1",
+     "title": "Legal risks of components, including third-party, are mapped",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "TP-02",
+      "TP-08",
+      "TP-12",
+      "GO-09"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "contracts",
+      "licences",
+      "gpai"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 4.2",
+     "title": "Internal risk controls for third-party components exist",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "TP-03",
+      "TP-05",
+      "TP-09"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 5.1",
+     "title": "Likelihood and magnitude of each impact are identified",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-17",
+      "HR-09"
+     ],
+     "mechanisms": [
+      "risk"
+     ],
+     "profile": [
+      "worst_case",
+      "impact_level"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MAP 5.2",
+     "title": "Practices engage relevant actors on impacts and collect feedback",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-15"
+     ],
+     "mechanisms": [
+      "requests"
+     ],
+     "profile": [
+      "affected_consulted"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MAP"
+    },
+    {
+     "ref": "MEASURE 1.1",
+     "title": "Measurement approaches and metrics are selected, and unmeasured risks are documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "DO-01"
+     ],
+     "mechanisms": [
+      "indicators",
+      "profile"
+     ],
+     "profile": [
+      "eval_metrics",
+      "known_limits"
+     ],
+     "note": "Known limits and facts nobody could supply are carried to Assess as concerns.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 1.2",
+     "title": "The appropriateness of metrics is regularly assessed and updated",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-16",
+      "GO-13"
+     ],
+     "mechanisms": [
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 1.3",
+     "title": "Experts who did not build the system take part in assessments",
+     "kind": "subcategory",
+     "status": "partial",
+     "controls": [
+      "MD-07",
+      "EA-05"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [],
+     "note": "Independent assessment is recommended in red-teaming and the yearly audit, and recorded, but not enforced; AIGRCeler agents are not independent of each other.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.1",
+     "title": "Test sets, metrics and TEVV details are documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "TP-05",
+      "MD-14"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "test_results"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.2",
+     "title": "Evaluations involving people meet human-subject protection standards",
+     "kind": "subcategory",
+     "status": "partial",
+     "controls": [
+      "HR-10"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [],
+     "note": "Covered only for usability and accessibility testing with people; formal human-subject protection review is the company's own process.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.3",
+     "title": "Performance is demonstrated under conditions like deployment",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "MD-03",
+      "TP-05"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "test_results"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.4",
+     "title": "The system is monitored in production",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-01"
+     ],
+     "mechanisms": [
+      "indicators"
+     ],
+     "profile": [
+      "monitoring_now"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.5",
+     "title": "Validity and reliability are demonstrated",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "MD-16"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.6",
+     "title": "Safety risks are evaluated",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-03",
+      "HR-09"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "safety_impact"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.7",
+     "title": "Security and resilience are evaluated",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-06",
+      "MD-07",
+      "MD-10",
+      "DG-09"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "adversarial_testing",
+      "security_review"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.8",
+     "title": "Transparency and accountability risks are examined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "EA-03",
+      "HR-05",
+      "GO-04"
+     ],
+     "mechanisms": [
+      "risk"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.9",
+     "title": "The model is explained and its output interpreted",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-05",
+      "DO-15"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "explainability"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.10",
+     "title": "Privacy risk is examined",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DG-04",
+      "DG-10",
+      "DG-16"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "data_basis",
+      "prompts_logs"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.11",
+     "title": "Fairness and bias are evaluated",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-04",
+      "DG-07",
+      "DO-02"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "bias_testing"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.12",
+     "title": "Environmental impact and sustainability are assessed",
+     "kind": "subcategory",
+     "status": "partial",
+     "controls": [
+      "GO-17"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "societal_effect"
+     ],
+     "note": "Considered in the impact assessment; energy and emissions are not measured by AIGRCeler.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 2.13",
+     "title": "The effectiveness of the evaluation metrics is assessed",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-16",
+      "GO-13",
+      "EA-05"
+     ],
+     "mechanisms": [
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 3.1",
+     "title": "Approaches identify emergent risks over time",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-03",
+      "DO-07",
+      "GO-16"
+     ],
+     "mechanisms": [
+      "risk",
+      "indicators"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 3.2",
+     "title": "Risk is tracked where it is hard to assess",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-16"
+     ],
+     "mechanisms": [
+      "risk",
+      "profile"
+     ],
+     "profile": [],
+     "note": "Facts that could not be learned are recorded as unknown, carried to Assess as concerns, and make the starting risk rating more cautious.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 3.3",
+     "title": "Feedback processes let end users report problems",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "HR-08",
+      "HR-11"
+     ],
+     "mechanisms": [
+      "incidents"
+     ],
+     "profile": [
+      "appeal_path"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 4.1",
+     "title": "Measurement approaches are connected to the deployment context",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "MD-02",
+      "DO-01",
+      "TP-05"
+     ],
+     "mechanisms": [
+      "profile"
+     ],
+     "profile": [
+      "eval_metrics"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 4.2",
+     "title": "Measurement results are informed by domain experts",
+     "kind": "subcategory",
+     "status": "partial",
+     "controls": [
+      "HR-02",
+      "MD-04"
+     ],
+     "mechanisms": [
+      "requests"
+     ],
+     "profile": [],
+     "note": "Owners and reviewers supply domain knowledge; there is no check that a domain expert reviewed each result.",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MEASURE 4.3",
+     "title": "Performance improvements and declines are documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-01",
+      "EA-10"
+     ],
+     "mechanisms": [
+      "indicators",
+      "journal",
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MEASURE"
+    },
+    {
+     "ref": "MANAGE 1.1",
+     "title": "It is determined whether the system achieves its purpose and should proceed",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-12",
+      "GO-07"
+     ],
+     "mechanisms": [
+      "stages",
+      "journal"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 1.2",
+     "title": "Treatment of documented risks is prioritized",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-07"
+     ],
+     "mechanisms": [
+      "risk"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 1.3",
+     "title": "Responses to high-priority risks are developed and documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-07"
+     ],
+     "mechanisms": [
+      "risk",
+      "catalog"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 1.4",
+     "title": "Negative residual risks are documented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-07"
+     ],
+     "mechanisms": [
+      "risk",
+      "journal"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 2.1",
+     "title": "Resources to manage risks are considered, including non-AI alternatives",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "GO-17"
+     ],
+     "mechanisms": [
+      "lanes"
+     ],
+     "profile": [
+      "resources"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 2.2",
+     "title": "Mechanisms sustain the value of deployed systems",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-01",
+      "GO-13"
+     ],
+     "mechanisms": [
+      "review"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 2.3",
+     "title": "Procedures respond to risks not known in advance",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-07",
+      "DO-03",
+      "GO-16"
+     ],
+     "mechanisms": [
+      "incidents",
+      "containment"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 2.4",
+     "title": "Mechanisms supersede, disengage or deactivate systems that perform inconsistently",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-09",
+      "GO-19"
+     ],
+     "mechanisms": [
+      "containment"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 3.1",
+     "title": "Third-party risks are monitored",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "TP-04",
+      "TP-06",
+      "DO-01"
+     ],
+     "mechanisms": [
+      "indicators"
+     ],
+     "profile": [
+      "vendor_model"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 3.2",
+     "title": "Pre-trained models used are monitored",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "TP-12",
+      "TP-09",
+      "TP-04",
+      "TP-05"
+     ],
+     "mechanisms": [
+      "evidence"
+     ],
+     "profile": [
+      "gpai"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 4.1",
+     "title": "Post-deployment monitoring plans are implemented",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-01",
+      "DO-02",
+      "DO-03",
+      "EA-07"
+     ],
+     "mechanisms": [
+      "indicators"
+     ],
+     "profile": [
+      "monitoring_now"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 4.2",
+     "title": "Continual improvement is built into the process",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "EA-10",
+      "HR-11"
+     ],
+     "mechanisms": [
+      "review",
+      "catalog"
+     ],
+     "profile": [],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    },
+    {
+     "ref": "MANAGE 4.3",
+     "title": "Incidents and errors are communicated to relevant parties",
+     "kind": "subcategory",
+     "status": "covered",
+     "controls": [
+      "DO-07",
+      "EA-08",
+      "HR-08",
+      "TP-13",
+      "EA-09"
+     ],
+     "mechanisms": [
+      "incidents",
+      "requests"
+     ],
+     "profile": [
+      "incident_contact"
+     ],
+     "note": "",
+     "roles": [
+      "any"
+     ],
+     "classes": [
+      "any"
+     ],
+     "function": "MANAGE"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,523 @@
+{
+  "version": "1.0",
+  "note": "Standard risk scenarios. Likelihood and impact are starting points (1 to 5); Meridian rates each one for the actual system.",
+  "scenarios": [
+    {
+      "id": "S-ACC-01",
+      "title": "The AI gives wrong or invented answers that people act on",
+      "dimension": "accuracy",
+      "domain": "MD",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "The AI gives wrong or invented answers that people act on",
+      "bump": {
+        "generative": {
+          "l": 1
+        },
+        "consequential_actions": {
+          "i": 1
+        }
+      }
+    },
+    {
+      "id": "S-ACC-02",
+      "title": "Results get worse over time as the world or the data changes",
+      "dimension": "accuracy",
+      "domain": "DO",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "Results get worse over time as the world or the data changes"
+    },
+    {
+      "id": "S-ACC-03",
+      "title": "The system fails in situations nobody tested (unusual inputs, edge cases)",
+      "dimension": "accuracy",
+      "domain": "MD",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "The system fails in situations nobody tested (unusual inputs, edge cases)"
+    },
+    {
+      "id": "S-ACC-04",
+      "title": "A change to the model, prompt or settings quietly breaks behaviour",
+      "dimension": "accuracy",
+      "domain": "DO",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "A change to the model, prompt or settings quietly breaks behaviour"
+    },
+    {
+      "id": "S-ACC-05",
+      "title": "The vendor changes or retires the model without telling you",
+      "dimension": "accuracy",
+      "domain": "TP",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true,
+        "modes": [
+          "adapted-from-third-party-base",
+          "third-party-service",
+          "embedded-in-vendor-product"
+        ]
+      },
+      "description": "The vendor changes or retires the model without telling you"
+    },
+    {
+      "id": "S-FAI-01",
+      "title": "Some groups of people get systematically worse results",
+      "dimension": "fairness",
+      "domain": "MD",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "flags_any": [
+          "decisions_about_people",
+          "personal_data",
+          "customer_facing_automated"
+        ]
+      },
+      "description": "Some groups of people get systematically worse results",
+      "bump": {
+        "decisions_about_people": {
+          "i": 1
+        }
+      }
+    },
+    {
+      "id": "S-FAI-02",
+      "title": "The data used to build or test the system does not represent the people affected",
+      "dimension": "fairness",
+      "domain": "DG",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "flags_any": [
+          "decisions_about_people",
+          "personal_data"
+        ],
+        "modes": [
+          "built-in-house",
+          "adapted-from-third-party-base",
+          "self-hosted-open-source"
+        ]
+      },
+      "description": "The data used to build or test the system does not represent the people affected"
+    },
+    {
+      "id": "S-FAI-03",
+      "title": "People cannot understand, question or appeal a decision about them",
+      "dimension": "fairness",
+      "domain": "HR",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "flags_any": [
+          "decisions_about_people"
+        ]
+      },
+      "description": "People cannot understand, question or appeal a decision about them",
+      "floor": {
+        "level": "High",
+        "when_all": [
+          "decisions_about_people",
+          "automated"
+        ]
+      }
+    },
+    {
+      "id": "S-DAT-01",
+      "title": "Poor-quality or unknown-source data feeds the system",
+      "dimension": "data",
+      "domain": "DG",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "Poor-quality or unknown-source data feeds the system"
+    },
+    {
+      "id": "S-DAT-02",
+      "title": "Personal data is used without a valid basis, or people cannot withdraw or opt out",
+      "dimension": "data",
+      "domain": "DG",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "flags_any": [
+          "personal_data",
+          "sensitive_data"
+        ]
+      },
+      "description": "Personal data is used without a valid basis, or people cannot withdraw or opt out",
+      "bump": {
+        "sensitive_data": {
+          "i": 1
+        }
+      }
+    },
+    {
+      "id": "S-DAT-03",
+      "title": "Training or reference data is tampered with (poisoning)",
+      "dimension": "data",
+      "domain": "DG",
+      "default_l": 2,
+      "default_i": 4,
+      "applies": {
+        "always": true,
+        "modes": [
+          "built-in-house",
+          "adapted-from-third-party-base",
+          "self-hosted-open-source"
+        ]
+      },
+      "description": "Training or reference data is tampered with (poisoning)"
+    },
+    {
+      "id": "S-DAT-04",
+      "title": "Confidential or personal data leaks through prompts, outputs or logs",
+      "dimension": "data",
+      "domain": "DG",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "flags_any": [
+          "generative",
+          "personal_data",
+          "customer_facing_automated"
+        ]
+      },
+      "description": "Confidential or personal data leaks through prompts, outputs or logs",
+      "bump": {
+        "generative": {
+          "l": 1
+        }
+      }
+    },
+    {
+      "id": "S-DAT-05",
+      "title": "Data is kept longer than allowed or cannot be deleted on request",
+      "dimension": "data",
+      "domain": "DG",
+      "default_l": 2,
+      "default_i": 3,
+      "applies": {
+        "flags_any": [
+          "personal_data",
+          "sensitive_data"
+        ]
+      },
+      "description": "Data is kept longer than allowed or cannot be deleted on request"
+    },
+    {
+      "id": "S-SEC-01",
+      "title": "Hostile inputs (prompt injection, adversarial examples) make the system misbehave",
+      "dimension": "security",
+      "domain": "MD",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "always": true
+      },
+      "description": "Hostile inputs (prompt injection, adversarial examples) make the system misbehave",
+      "bump": {
+        "generative": {
+          "l": 1
+        },
+        "customer_facing_automated": {
+          "l": 1
+        }
+      }
+    },
+    {
+      "id": "S-SEC-02",
+      "title": "Someone without permission reaches the model, data or keys",
+      "dimension": "security",
+      "domain": "DO",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "always": true
+      },
+      "description": "Someone without permission reaches the model, data or keys"
+    },
+    {
+      "id": "S-SEC-03",
+      "title": "The AI software contains vulnerable code or libraries",
+      "dimension": "security",
+      "domain": "MD",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true,
+        "modes": [
+          "built-in-house",
+          "adapted-from-third-party-base",
+          "self-hosted-open-source"
+        ]
+      },
+      "description": "The AI software contains vulnerable code or libraries"
+    },
+    {
+      "id": "S-SEC-04",
+      "title": "The model or its training data is stolen or reverse-engineered",
+      "dimension": "security",
+      "domain": "MD",
+      "default_l": 2,
+      "default_i": 3,
+      "applies": {
+        "always": true,
+        "modes": [
+          "built-in-house",
+          "adapted-from-third-party-base",
+          "self-hosted-open-source"
+        ]
+      },
+      "description": "The model or its training data is stolen or reverse-engineered"
+    },
+    {
+      "id": "S-SEC-05",
+      "title": "The system is used for harmful purposes outside what it was meant for",
+      "dimension": "security",
+      "domain": "HR",
+      "default_l": 2,
+      "default_i": 4,
+      "applies": {
+        "flags_any": [
+          "generative",
+          "customer_facing_automated"
+        ]
+      },
+      "description": "The system is used for harmful purposes outside what it was meant for"
+    },
+    {
+      "id": "S-SEC-06",
+      "title": "A failure spreads to other systems that depend on it, with no way to stop it",
+      "dimension": "security",
+      "domain": "DO",
+      "default_l": 2,
+      "default_i": 5,
+      "applies": {
+        "flags_any": [
+          "consequential_actions",
+          "many_dependencies"
+        ]
+      },
+      "description": "A failure spreads to other systems that depend on it, with no way to stop it",
+      "floor": {
+        "level": "High",
+        "when_all": [
+          "consequential_actions"
+        ]
+      }
+    },
+    {
+      "id": "S-SEC-07",
+      "title": "An AI agent takes a harmful action through the tools or plug-ins it can reach",
+      "dimension": "security",
+      "domain": "DO",
+      "default_l": 3,
+      "default_i": 5,
+      "applies": {
+        "flags_any": [
+          "consequential_actions"
+        ]
+      },
+      "description": "An AI agent takes a harmful action through the tools or plug-ins it can reach"
+    },
+    {
+      "id": "S-SEC-08",
+      "title": "A third-party model or component is compromised",
+      "dimension": "security",
+      "domain": "TP",
+      "default_l": 2,
+      "default_i": 4,
+      "applies": {
+        "always": true,
+        "modes": [
+          "adapted-from-third-party-base",
+          "third-party-service",
+          "self-hosted-open-source",
+          "embedded-in-vendor-product"
+        ]
+      },
+      "description": "A third-party model or component is compromised"
+    },
+    {
+      "id": "S-HUM-01",
+      "title": "People trust the AI too much and stop checking",
+      "dimension": "oversight",
+      "domain": "HR",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "People trust the AI too much and stop checking"
+    },
+    {
+      "id": "S-HUM-02",
+      "title": "No human can stop, override or review the system when needed",
+      "dimension": "oversight",
+      "domain": "HR",
+      "default_l": 2,
+      "default_i": 5,
+      "applies": {
+        "flags_any": [
+          "decisions_about_people",
+          "consequential_actions",
+          "safety_impact",
+          "automated"
+        ]
+      },
+      "description": "No human can stop, override or review the system when needed",
+      "floor": {
+        "level": "High",
+        "when_all": [
+          "decisions_about_people",
+          "automated"
+        ]
+      }
+    },
+    {
+      "id": "S-HUM-03",
+      "title": "Users do not know they are dealing with AI, or do not understand its limits",
+      "dimension": "oversight",
+      "domain": "HR",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "Users do not know they are dealing with AI, or do not understand its limits"
+    },
+    {
+      "id": "S-HUM-04",
+      "title": "The people who use or oversee the system lack the skills or training",
+      "dimension": "oversight",
+      "domain": "GO",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "The people who use or oversee the system lack the skills or training"
+    },
+    {
+      "id": "S-HUM-05",
+      "title": "Affected people cannot report a problem or get redress",
+      "dimension": "oversight",
+      "domain": "HR",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "flags_any": [
+          "customer_facing_automated",
+          "decisions_about_people",
+          "personal_data"
+        ]
+      },
+      "description": "Affected people cannot report a problem or get redress"
+    },
+    {
+      "id": "S-REG-01",
+      "title": "A prohibited or high-risk use goes ahead without the required legal steps",
+      "dimension": "regulatory",
+      "domain": "GO",
+      "default_l": 3,
+      "default_i": 5,
+      "applies": {
+        "flags_any": [
+          "eu_high_risk"
+        ]
+      },
+      "description": "A prohibited or high-risk use goes ahead without the required legal steps",
+      "floor": {
+        "level": "High",
+        "when_all": [
+          "eu_high_risk"
+        ]
+      }
+    },
+    {
+      "id": "S-REG-02",
+      "title": "Records are too thin to show a regulator what was done and why",
+      "dimension": "regulatory",
+      "domain": "EA",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "always": true
+      },
+      "description": "Records are too thin to show a regulator what was done and why"
+    },
+    {
+      "id": "S-REG-03",
+      "title": "Nobody clearly owns decisions about the system",
+      "dimension": "regulatory",
+      "domain": "GO",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true
+      },
+      "description": "Nobody clearly owns decisions about the system"
+    },
+    {
+      "id": "S-REG-04",
+      "title": "Vendor contracts lack the data, audit, security or liability terms needed",
+      "dimension": "regulatory",
+      "domain": "TP",
+      "default_l": 3,
+      "default_i": 3,
+      "applies": {
+        "always": true,
+        "modes": [
+          "adapted-from-third-party-base",
+          "third-party-service",
+          "embedded-in-vendor-product"
+        ]
+      },
+      "description": "Vendor contracts lack the data, audit, security or liability terms needed"
+    },
+    {
+      "id": "S-REG-05",
+      "title": "An incident is missed, escalated late or not reported when required",
+      "dimension": "regulatory",
+      "domain": "DO",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "always": true
+      },
+      "description": "An incident is missed, escalated late or not reported when required"
+    },
+    {
+      "id": "S-REG-07",
+      "title": "Obligations specific to your sector are missed",
+      "dimension": "regulatory",
+      "domain": "GO",
+      "default_l": 3,
+      "default_i": 4,
+      "applies": {
+        "flags_any": [
+          "regulated_sector"
+        ]
+      },
+      "description": "Obligations specific to your sector are missed"
+    }
+  ]
+}

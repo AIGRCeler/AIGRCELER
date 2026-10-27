@@ -1,0 +1,3787 @@
+{
+ "contract": "1",
+ "generated": "2026-10-27T02:19:52+00:00",
+ "engine_version": "2.0.0",
+ "template_version": null,
+ "config": {
+  "title": null,
+  "accent": null,
+  "hide": [],
+  "logo": null
+ },
+ "company": {
+  "name": "Brightwell Talent Partners (sample data)",
+  "catalog_version": "1.0",
+  "journal": {
+   "intact": true,
+   "problems": [],
+   "count": 41,
+   "head": "c47a90de1b22"
+  }
+ },
+ "totals": {
+  "systems": 2,
+  "in_operate": 1,
+  "ready": 0,
+  "serious_incidents": 1,
+  "late": 8,
+  "waiting_us": 5,
+  "attention_critical": 0,
+  "attention_serious": 2
+ },
+ "attention": [
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "serious",
+   "text": "Open high incident INC-001: Fairness reading for the lowest-scoring group is below the company's limit (version 4.2)",
+   "tab": "watch"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "serious",
+   "text": "1 required control(s) are past their due date (longest 4 days late).",
+   "tab": "controls"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "warning",
+   "text": "Open low incident INC-003: A candidate complained they were rejected without any human review",
+   "tab": "watch"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "warning",
+   "text": "7 other control(s) are past their due date.",
+   "tab": "controls"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "warning",
+   "text": "A review is also called for: incident INC-002 (medium) closed since the last review.",
+   "tab": "watch"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "warning",
+   "text": "Obligation due 2026-11-14 (in 18 days): Halvorsen Logistics: AI hiring-tool assurance pack due to the client",
+   "tab": "watch"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "warning",
+   "text": "Obligation due 2026-11-21 (in 25 days): Candidate notice that AI scores applications is published",
+   "tab": "watch"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "warning",
+   "text": "Evidence EV-004 for TP-04 expires in 9 day(s).",
+   "tab": "evidence"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "warning",
+   "text": "5 item(s) are waiting on us (messages not written or not marked as sent, or no owner).",
+   "tab": "chase"
+  },
+  {
+   "system": "talentlens",
+   "system_name": "TalentLens",
+   "severity": "info",
+   "text": "6 control(s) have evidence waiting for an independent check.",
+   "tab": "chase"
+  },
+  {
+   "system": "handbookbot",
+   "system_name": "HandbookBot",
+   "severity": "info",
+   "text": "3 control(s) have evidence waiting for an independent check.",
+   "tab": "chase"
+  }
+ ],
+ "systems": [
+  {
+   "slug": "talentlens",
+   "name": "TalentLens",
+   "purpose": "The candidate-ranking and automatic-rejection feature inside Kestrel, our applicant tracking system. It scores every applicant and used to reject those below a cut-off without a person looking.",
+   "lane": "full",
+   "lane_decided": true,
+   "lane_suggested": "full",
+   "tier": 4,
+   "sourcing": "embedded-in-vendor-product",
+   "current_stage": "OPERATE",
+   "stages": [
+    {
+     "id": "DISCOVER",
+     "status": "closed",
+     "started": "2026-09-30",
+     "closed": "2026-10-03"
+    },
+    {
+     "id": "ASSESS",
+     "status": "closed",
+     "started": "2026-10-03",
+     "closed": "2026-10-08"
+    },
+    {
+     "id": "GOVERN",
+     "status": "closed",
+     "started": "2026-10-08",
+     "closed": "2026-10-14"
+    },
+    {
+     "id": "OPERATE",
+     "status": "started",
+     "started": "2026-10-14",
+     "closed": null
+    }
+   ],
+   "go": {
+    "state": "not_ready",
+    "required": 15,
+    "done": 4,
+    "last": null,
+    "count": 0,
+    "blockers": [
+     "9 critical control(s) are not verified yet: GO-08, GO-11, DG-02, MD-07, TP-02, TP-05.",
+     "High or critical incidents are still open: INC-001."
+    ]
+   },
+   "profile": {
+    "level": "full",
+    "required": 41,
+    "answered": 34,
+    "unknown": 3,
+    "open": 4,
+    "rate": 0.07317073170731707,
+    "limit": 0.2
+   },
+   "controls": {
+    "total": 69,
+    "groups": {
+     "in_place": 19,
+     "in_progress": 18,
+     "waiting": 23,
+     "problem": 7,
+     "waived": 2
+    },
+    "by_area": [
+     {
+      "code": "GO",
+      "title": "Governance and organization",
+      "total": 17,
+      "states": {
+       "drafted": 0,
+       "approved": 1,
+       "assigned": 3,
+       "implementing": 2,
+       "evidenced": 3,
+       "verified": 3,
+       "monitored": 2,
+       "rejected": 1,
+       "waived": 1,
+       "expired": 1
+      },
+      "in_place": 5,
+      "strength": {
+       "strong": 4,
+       "moderate": 1,
+       "weak": 0
+      }
+     },
+     {
+      "code": "DG",
+      "title": "Data",
+      "total": 10,
+      "states": {
+       "drafted": 0,
+       "approved": 0,
+       "assigned": 2,
+       "implementing": 3,
+       "evidenced": 1,
+       "verified": 2,
+       "monitored": 1,
+       "rejected": 1,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 3,
+      "strength": {
+       "strong": 2,
+       "moderate": 1,
+       "weak": 0
+      }
+     },
+     {
+      "code": "MD",
+      "title": "Model (built or adapted in-house)",
+      "total": 1,
+      "states": {
+       "drafted": 0,
+       "approved": 0,
+       "assigned": 0,
+       "implementing": 1,
+       "evidenced": 0,
+       "verified": 0,
+       "monitored": 0,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 0,
+      "strength": {
+       "strong": 0,
+       "moderate": 0,
+       "weak": 0
+      }
+     },
+     {
+      "code": "TP",
+      "title": "Third party",
+      "total": 10,
+      "states": {
+       "drafted": 0,
+       "approved": 2,
+       "assigned": 3,
+       "implementing": 1,
+       "evidenced": 0,
+       "verified": 2,
+       "monitored": 1,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 1
+      },
+      "in_place": 3,
+      "strength": {
+       "strong": 2,
+       "moderate": 1,
+       "weak": 0
+      }
+     },
+     {
+      "code": "DO",
+      "title": "Deployment and operations",
+      "total": 12,
+      "states": {
+       "drafted": 0,
+       "approved": 0,
+       "assigned": 5,
+       "implementing": 3,
+       "evidenced": 0,
+       "verified": 2,
+       "monitored": 1,
+       "rejected": 1,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 3,
+      "strength": {
+       "strong": 2,
+       "moderate": 1,
+       "weak": 0
+      }
+     },
+     {
+      "code": "HR",
+      "title": "Human oversight and rights",
+      "total": 12,
+      "states": {
+       "drafted": 0,
+       "approved": 1,
+       "assigned": 2,
+       "implementing": 1,
+       "evidenced": 2,
+       "verified": 2,
+       "monitored": 1,
+       "rejected": 1,
+       "waived": 1,
+       "expired": 1
+      },
+      "in_place": 3,
+      "strength": {
+       "strong": 1,
+       "moderate": 2,
+       "weak": 0
+      }
+     },
+     {
+      "code": "EA",
+      "title": "Evidence and audit",
+      "total": 7,
+      "states": {
+       "drafted": 0,
+       "approved": 2,
+       "assigned": 2,
+       "implementing": 1,
+       "evidenced": 0,
+       "verified": 1,
+       "monitored": 1,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 2,
+      "strength": {
+       "strong": 2,
+       "moderate": 0,
+       "weak": 0
+      }
+     }
+    ]
+   },
+   "control_rows": [
+    {
+     "id": "GO-01",
+     "title": "Name the AI Governance lead and a deputy",
+     "area": "GO",
+     "state": "monitored",
+     "owner": "Raj Patel",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": true,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-02",
+     "title": "Adopt a short AI principles statement",
+     "area": "GO",
+     "state": "waived",
+     "owner": "Raj Patel",
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-03",
+     "title": "Register the AI system in the company AI inventory",
+     "area": "GO",
+     "state": "evidenced",
+     "owner": "Tamsin Clarke",
+     "due": "2026-11-02",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": true,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "GO-04",
+     "title": "Name a business owner for the system's outcomes",
+     "area": "GO",
+     "state": "expired",
+     "owner": "Raj Patel",
+     "due": "2026-10-24",
+     "late": 3,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-05",
+     "title": "Set a simple acceptable-use rule for staff",
+     "area": "GO",
+     "state": "rejected",
+     "owner": "Oren Weiss",
+     "due": "2026-10-22",
+     "late": 5,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-06",
+     "title": "Give people who use or oversee the system basic AI training",
+     "area": "GO",
+     "state": "verified",
+     "owner": "Tamsin Clarke",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-07",
+     "title": "Agree how risks are accepted and exceptions are recorded",
+     "area": "GO",
+     "state": "implementing",
+     "owner": "Raj Patel",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-08",
+     "title": "Write down the intended purpose and check it is not a prohibited use",
+     "area": "GO",
+     "state": "assigned",
+     "owner": "Oren Weiss",
+     "due": "2026-11-06",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-09",
+     "title": "Record how the system is classified under the EU AI Act",
+     "area": "GO",
+     "state": "approved",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "GO-11",
+     "title": "Assess the impact on people's fundamental rights",
+     "area": "GO",
+     "state": "evidenced",
+     "owner": "Oren Weiss",
+     "due": "2026-11-02",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": false,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "GO-12",
+     "title": "List the obligations specific to your sector",
+     "area": "GO",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-13",
+     "title": "Review the AI system and its controls every year",
+     "area": "GO",
+     "state": "monitored",
+     "owner": "Tamsin Clarke",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-14",
+     "title": "Agree what changes need approval again",
+     "area": "GO",
+     "state": "implementing",
+     "owner": "Mei Lin Chen",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-15",
+     "title": "Talk with the people the system affects",
+     "area": "GO",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-16",
+     "title": "Keep a company-level AI risk register",
+     "area": "GO",
+     "state": "assigned",
+     "owner": "Raj Patel",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-17",
+     "title": "Assess the impact of the AI system on individuals, groups and society",
+     "area": "GO",
+     "state": "verified",
+     "owner": "Tamsin Clarke",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-19",
+     "title": "Retire or replace the AI system safely",
+     "area": "GO",
+     "state": "evidenced",
+     "owner": "Tamsin Clarke",
+     "due": "2026-11-26",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "DG-01",
+     "title": "Know your data: sources, owners and purpose",
+     "area": "DG",
+     "state": "rejected",
+     "owner": "Mei Lin Chen",
+     "due": "2026-10-22",
+     "late": 5,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DG-02",
+     "title": "Have a lawful basis and give notice when using personal data",
+     "area": "DG",
+     "state": "implementing",
+     "owner": "Oren Weiss",
+     "due": "2026-11-05",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": "us"
+    },
+    {
+     "id": "DG-03",
+     "title": "Honour withdrawal of consent and opt-outs all the way through",
+     "area": "DG",
+     "state": "assigned",
+     "owner": "Mei Lin Chen",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "DG-04",
+     "title": "Carry out a data protection impact assessment where it is required",
+     "area": "DG",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DG-06",
+     "title": "Check data quality before and during use",
+     "area": "DG",
+     "state": "implementing",
+     "owner": "Mei Lin Chen",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "DG-08",
+     "title": "Protect data with access control and encryption",
+     "area": "DG",
+     "state": "monitored",
+     "owner": "Dario Fontana",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DG-10",
+     "title": "Keep personal and confidential data out of prompts and logs",
+     "area": "DG",
+     "state": "evidenced",
+     "owner": "Mei Lin Chen",
+     "due": "2026-11-26",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "DG-11",
+     "title": "Set how long data is kept and how it is deleted",
+     "area": "DG",
+     "state": "implementing",
+     "owner": "Oren Weiss",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "DG-12",
+     "title": "Know what data leaves the company when you use a vendor",
+     "area": "DG",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DG-13",
+     "title": "Collect and keep only the data you need",
+     "area": "DG",
+     "state": "assigned",
+     "owner": "Mei Lin Chen",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "MD-07",
+     "title": "Red-team the AI system",
+     "area": "MD",
+     "state": "implementing",
+     "owner": "Dario Fontana",
+     "due": "2026-10-23",
+     "late": 4,
+     "strength": null,
+     "critical": true,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "TP-01",
+     "title": "Check the vendor before you rely on it",
+     "area": "TP",
+     "state": "approved",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": true,
+     "waiting_on": "us"
+    },
+    {
+     "id": "TP-02",
+     "title": "Get the right terms in the vendor contract",
+     "area": "TP",
+     "state": "assigned",
+     "owner": "Oren Weiss",
+     "due": "2026-11-06",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "TP-03",
+     "title": "Obtain the vendor's documentation and stated limits",
+     "area": "TP",
+     "state": "verified",
+     "owner": "Mei Lin Chen",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "TP-04",
+     "title": "Agree how the vendor tells you about changes",
+     "area": "TP",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "TP-05",
+     "title": "Test the vendor's system on your own cases",
+     "area": "TP",
+     "state": "approved",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "TP-06",
+     "title": "Keep the vendor's security assurance current",
+     "area": "TP",
+     "state": "monitored",
+     "owner": "Dario Fontana",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "TP-07",
+     "title": "Have a plan for leaving or replacing the vendor",
+     "area": "TP",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "TP-10",
+     "title": "Review where the vendor and its sub-suppliers hold your data",
+     "area": "TP",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "TP-11",
+     "title": "Write down who is responsible for what between you and the vendor",
+     "area": "TP",
+     "state": "implementing",
+     "owner": "Oren Weiss",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "TP-13",
+     "title": "Know how to reach the vendor in an incident and how fast they respond",
+     "area": "TP",
+     "state": "expired",
+     "owner": "Dario Fontana",
+     "due": "2026-10-24",
+     "late": 3,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-01",
+     "title": "Watch accuracy and drift in live use",
+     "area": "DO",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-02",
+     "title": "Watch fairness in live use",
+     "area": "DO",
+     "state": "implementing",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-03",
+     "title": "Watch for attacks and strange inputs",
+     "area": "DO",
+     "state": "verified",
+     "owner": "Dario Fontana",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DO-04",
+     "title": "Give people only the access they need, and review it",
+     "area": "DO",
+     "state": "assigned",
+     "owner": "Dario Fontana",
+     "due": "2026-11-06",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-05",
+     "title": "Keep secrets and API keys safe",
+     "area": "DO",
+     "state": "implementing",
+     "owner": "Dario Fontana",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-06",
+     "title": "Keep logs that let you trace what the system did",
+     "area": "DO",
+     "state": "rejected",
+     "owner": "Mei Lin Chen",
+     "due": "2026-10-22",
+     "late": 5,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-07",
+     "title": "Have an incident plan that covers AI failures",
+     "area": "DO",
+     "state": "monitored",
+     "owner": "Dario Fontana",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": null
+    },
+    {
+     "id": "DO-08",
+     "title": "Practise the incident plan",
+     "area": "DO",
+     "state": "verified",
+     "owner": "Dario Fontana",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DO-12",
+     "title": "Do not go live without AI Governance sign-off",
+     "area": "DO",
+     "state": "assigned",
+     "owner": "Mei Lin Chen",
+     "due": "2026-11-06",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-13",
+     "title": "Be able to roll back and recover",
+     "area": "DO",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-15",
+     "title": "Watch explainability signals in live use",
+     "area": "DO",
+     "state": "implementing",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-16",
+     "title": "Review alert thresholds and how alerts are handled",
+     "area": "DO",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "HR-01",
+     "title": "Define human oversight: who reviews, when, with what power",
+     "area": "HR",
+     "state": "verified",
+     "owner": "Tamsin Clarke",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": null
+    },
+    {
+     "id": "HR-02",
+     "title": "Train and equip the reviewers",
+     "area": "HR",
+     "state": "evidenced",
+     "owner": "Tamsin Clarke",
+     "due": "2026-11-26",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "HR-03",
+     "title": "Design the screen and process to avoid over-reliance",
+     "area": "HR",
+     "state": "approved",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "HR-04",
+     "title": "Tell people when they are dealing with AI, and label AI content",
+     "area": "HR",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-11-06",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "HR-05",
+     "title": "Explain in plain words what the system does and its limits",
+     "area": "HR",
+     "state": "expired",
+     "owner": "Tamsin Clarke",
+     "due": "2026-10-24",
+     "late": 3,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "HR-06",
+     "title": "Give people an explanation and a human review of decisions about them",
+     "area": "HR",
+     "state": "monitored",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": null
+    },
+    {
+     "id": "HR-07",
+     "title": "Provide a way to appeal and contest",
+     "area": "HR",
+     "state": "rejected",
+     "owner": "Tamsin Clarke",
+     "due": "2026-10-22",
+     "late": 5,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "HR-08",
+     "title": "Offer a way to report problems",
+     "area": "HR",
+     "state": "implementing",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "HR-10",
+     "title": "Check the system is usable and fair for people with different needs",
+     "area": "HR",
+     "state": "evidenced",
+     "owner": "Tamsin Clarke",
+     "due": "2026-11-26",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "HR-11",
+     "title": "Learn from appeals and complaints",
+     "area": "HR",
+     "state": "waived",
+     "owner": "Tamsin Clarke",
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "HR-12",
+     "title": "Offer a human alternative where required",
+     "area": "HR",
+     "state": "verified",
+     "owner": "Tamsin Clarke",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "HR-13",
+     "title": "Set a misuse policy and a way to report abuse",
+     "area": "HR",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "EA-01",
+     "title": "Check the decision journal is intact",
+     "area": "EA",
+     "state": "assigned",
+     "owner": "Tamsin Clarke",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "EA-02",
+     "title": "Keep evidence for the required period",
+     "area": "EA",
+     "state": "implementing",
+     "owner": "Oren Weiss",
+     "due": "2026-12-01",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "EA-04",
+     "title": "Keep automatic records of system use",
+     "area": "EA",
+     "state": "approved",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    },
+    {
+     "id": "EA-05",
+     "title": "Audit the AI governance program yearly",
+     "area": "EA",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "EA-06",
+     "title": "Be ready to answer a regulator",
+     "area": "EA",
+     "state": "monitored",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "strong",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "EA-08",
+     "title": "Be ready to report serious incidents to authorities",
+     "area": "EA",
+     "state": "assigned",
+     "owner": "Oren Weiss",
+     "due": "2026-12-06",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "EA-10",
+     "title": "Write a short lessons-learned note after each incident and each yearly review",
+     "area": "EA",
+     "state": "approved",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "us"
+    }
+   ],
+   "risk": {
+    "scored": true,
+    "as_of": "2026-10-26 08:40",
+    "inherent": 64.5,
+    "residual": 52.8,
+    "inherent_band": "Red",
+    "residual_band": "Orange",
+    "unrated": 0,
+    "dimensions": [
+     {
+      "key": "accuracy",
+      "title": "Accuracy",
+      "max": 20,
+      "scenarios": 5,
+      "inherent": 14.0,
+      "residual": 11.0
+     },
+     {
+      "key": "fairness",
+      "title": "Fairness",
+      "max": 20,
+      "scenarios": 4,
+      "inherent": 16.0,
+      "residual": 14.5
+     },
+     {
+      "key": "data",
+      "title": "Data",
+      "max": 15,
+      "scenarios": 5,
+      "inherent": 10.0,
+      "residual": 7.0
+     },
+     {
+      "key": "security",
+      "title": "Security",
+      "max": 15,
+      "scenarios": 5,
+      "inherent": 8.5,
+      "residual": 6.0
+     },
+     {
+      "key": "oversight",
+      "title": "Oversight",
+      "max": 15,
+      "scenarios": 4,
+      "inherent": 8.0,
+      "residual": 6.3
+     },
+     {
+      "key": "regulatory",
+      "title": "Regulatory",
+      "max": 15,
+      "scenarios": 6,
+      "inherent": 8.0,
+      "residual": 8.0
+     }
+    ],
+    "scenarios": [
+     {
+      "id": "R-001",
+      "title": "The AI gives wrong or invented answers that people act on",
+      "dimension": "accuracy",
+      "before": 16,
+      "before_level": "Critical",
+      "after": 12,
+      "after_level": "High",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 2
+     },
+     {
+      "id": "R-004",
+      "title": "The system treats groups of applicants unfairly",
+      "dimension": "fairness",
+      "before": 16,
+      "before_level": "Critical",
+      "after": 16,
+      "after_level": "Critical",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 0
+     },
+     {
+      "id": "R-007",
+      "title": "Applicants are rejected with no human look at the decision",
+      "dimension": "oversight",
+      "before": 12,
+      "before_level": "High",
+      "after": 6,
+      "after_level": "Medium",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 2
+     },
+     {
+      "id": "R-011",
+      "title": "Applicant data is used or kept in ways applicants were not told about",
+      "dimension": "data",
+      "before": 9,
+      "before_level": "High",
+      "after": 6,
+      "after_level": "Medium",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 1
+     },
+     {
+      "id": "R-018",
+      "title": "The vendor changes the model and nobody notices",
+      "dimension": "accuracy",
+      "before": 12,
+      "before_level": "High",
+      "after": 9,
+      "after_level": "High",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 1
+     },
+     {
+      "id": "R-026",
+      "title": "Brightwell cannot show a client how the tool decides",
+      "dimension": "regulatory",
+      "before": 20,
+      "before_level": "Critical",
+      "after": 20,
+      "after_level": "Critical",
+      "floor_applied": true,
+      "rated": true,
+      "accepted": true,
+      "credits": 0
+     },
+     {
+      "id": "R-029",
+      "title": "Security weakness at the vendor exposes candidate records",
+      "dimension": "security",
+      "before": 8,
+      "before_level": "Medium",
+      "after": 4,
+      "after_level": "Low",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 2
+     }
+    ],
+    "acceptances": [
+     {
+      "risk": "R-026",
+      "title": "Brightwell cannot show a client how the tool decides",
+      "level": "Critical",
+      "by": [
+       "Raj Patel"
+      ],
+      "time": "2026-10-21",
+      "until": "2027-01-10",
+      "days_left": 75
+     }
+    ]
+   },
+   "evidence": {
+    "total": 16,
+    "by_status": {
+     "accepted": 9,
+     "received": 3,
+     "expired": 2,
+     "not-accepted": 2
+    },
+    "expiring": [
+     {
+      "id": "EV-004",
+      "control": "TP-04",
+      "valid_until": "2026-11-05",
+      "days_left": 9
+     },
+     {
+      "id": "EV-011",
+      "control": "DG-05",
+      "valid_until": "2026-11-20",
+      "days_left": 24
+     }
+    ],
+    "mismatch": []
+   },
+   "incidents": [
+    {
+     "id": "INC-001",
+     "title": "Fairness reading for the lowest-scoring group is below the company's limit (version 4.2)",
+     "severity": "high",
+     "status": "open",
+     "opened": "2026-10-23",
+     "escalate_due": "2026-10-23 16:20",
+     "acknowledged": true,
+     "overdue_ack": false,
+     "response_owner": "Mei Lin Chen",
+     "reportable": false,
+     "closed": null,
+     "lesson": null
+    },
+    {
+     "id": "INC-003",
+     "title": "A candidate complained they were rejected without any human review",
+     "severity": "low",
+     "status": "open",
+     "opened": "2026-10-26",
+     "escalate_due": "2026-10-31 09:00",
+     "acknowledged": false,
+     "overdue_ack": false,
+     "response_owner": "Tamsin Clarke",
+     "reportable": false,
+     "closed": null,
+     "lesson": null
+    },
+    {
+     "id": "INC-002",
+     "title": "Automatic rejection ran for two days after the pause was agreed",
+     "severity": "medium",
+     "status": "closed",
+     "opened": "2026-10-16",
+     "escalate_due": "2026-10-17 10:00",
+     "acknowledged": true,
+     "overdue_ack": false,
+     "response_owner": "Tamsin Clarke",
+     "reportable": false,
+     "closed": "2026-10-19",
+     "lesson": "A pause needs someone to confirm in writing that it is in place."
+    }
+   ],
+   "indicators": [
+    {
+     "id": "IND-001",
+     "control": "TP-05",
+     "metric": "Monthly fairness: selection-rate ratio of the lowest group to the best-off group",
+     "current": 0.72,
+     "min": 0.8,
+     "max": null,
+     "unit": "ratio",
+     "status": "out_of_tolerance",
+     "updated": "2026-10-23",
+     "history": [
+      0.81,
+      0.79,
+      0.72
+     ]
+    },
+    {
+     "id": "IND-002",
+     "control": "HR-04",
+     "metric": "Candidate complaints per 1,000 applicants",
+     "current": 1.2,
+     "min": null,
+     "max": 2.0,
+     "unit": "per 1,000",
+     "status": "in_tolerance",
+     "updated": "2026-10-25",
+     "history": [
+      1.9,
+      1.6,
+      1.4,
+      1.3,
+      1.2
+     ]
+    }
+   ],
+   "obligations": [
+    {
+     "id": "OB-001",
+     "title": "Halvorsen Logistics: AI hiring-tool assurance pack due to the client",
+     "authority": "Client contract with Halvorsen Logistics",
+     "due": "2026-11-14",
+     "days_left": 18,
+     "status": "open"
+    },
+    {
+     "id": "OB-002",
+     "title": "Candidate notice that AI scores applications is published",
+     "authority": "Internal commitment",
+     "due": "2026-11-21",
+     "days_left": 25,
+     "status": "open"
+    }
+   ],
+   "containment": [
+    {
+     "id": "CT-001",
+     "title": "Automatic rejection in Kestrel switched off; every candidate below the cut-off goes to a recruiter queue",
+     "ends": "2026-12-06",
+     "days_left": 40,
+     "status": "active",
+     "confirmed": true
+    }
+   ],
+   "exceptions": [
+    {
+     "id": "EX-001",
+     "what": "Oren Weiss owns the legal controls although he holds an AI Governance role; he does not verify his own evidence.",
+     "approved_by": "Elena Marchetti",
+     "expires": "2026-12-26",
+     "days_left": 60
+    }
+   ],
+   "concerns": {
+    "open": 5,
+    "resolved": 21,
+    "list": [
+     {
+      "id": "CON-012",
+      "kind": "concern",
+      "text": "Postal code and graduation year may stand in for protected characteristics.",
+      "carry_to": "OPERATE",
+      "raised": "2026-10-05"
+     },
+     {
+      "id": "CON-019",
+      "kind": "concern",
+      "text": "Nobody at Brightwell has tested how well the vendor's model works on Brightwell's own candidates.",
+      "carry_to": "OPERATE",
+      "raised": "2026-10-07"
+     },
+     {
+      "id": "CON-031",
+      "kind": "proposal",
+      "text": "Ask Kestrel for a change notice at least 30 days before any model update.",
+      "carry_to": "OPERATE",
+      "raised": "2026-10-13"
+     },
+     {
+      "id": "CON-040",
+      "kind": "concern",
+      "text": "The go decision was recorded with items still open (see the record).",
+      "carry_to": "OPERATE",
+      "raised": "2026-10-15"
+     },
+     {
+      "id": "CON-044",
+      "kind": "concern",
+      "text": "No confirmation yet that candidates in the EU have been told AI scores them.",
+      "carry_to": "OPERATE",
+      "raised": "2026-10-18"
+     }
+    ]
+   },
+   "assessments": [
+    {
+     "key": "fairness",
+     "status": "planned",
+     "note": "Planned as analysis once the vendor's own fairness results arrive or are confirmed not to exist."
+    },
+    {
+     "key": "rights",
+     "status": "planned",
+     "note": "Carried by the human-oversight and notice controls."
+    },
+    {
+     "key": "dpia",
+     "status": "planned",
+     "note": "Counsel to say whether a data-protection assessment is needed."
+    }
+   ],
+   "blocks": [],
+   "review": {
+    "every": 90,
+    "custom": false,
+    "last": null,
+    "due": "2027-01-12",
+    "left": 77,
+    "reasons": [
+     "incident INC-002 (medium) closed since the last review"
+    ],
+    "count": 0
+   },
+   "chase": [
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DG-01",
+     "title": "Know your data: sources, owners and purpose",
+     "priority": 2,
+     "due": "2026-10-22",
+     "late": 5,
+     "side": "owner",
+     "action": "The evidence was not accepted (see the finding). Ask Mei Lin Chen for better evidence."
+    },
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DO-06",
+     "title": "Keep logs that let you trace what the system did",
+     "priority": 2,
+     "due": "2026-10-22",
+     "late": 5,
+     "side": "owner",
+     "action": "The evidence was not accepted (see the finding). Ask Mei Lin Chen for better evidence."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "GO-05",
+     "title": "Set a simple acceptable-use rule for staff",
+     "priority": 2,
+     "due": "2026-10-22",
+     "late": 5,
+     "side": "owner",
+     "action": "The evidence was not accepted (see the finding). Ask Oren Weiss for better evidence."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "HR-07",
+     "title": "Provide a way to appeal and contest",
+     "priority": 2,
+     "due": "2026-10-22",
+     "late": 5,
+     "side": "owner",
+     "action": "The evidence was not accepted (see the finding). Ask Tamsin Clarke for better evidence."
+    },
+    {
+     "who": "Dario Fontana",
+     "kind": "control",
+     "id": "MD-07",
+     "title": "Red-team the AI system",
+     "priority": 0,
+     "due": "2026-10-23",
+     "late": 4,
+     "side": "owner",
+     "action": "Asked on 2026-10-16 (REQ-047); waiting for the answer."
+    },
+    {
+     "who": "Raj Patel",
+     "kind": "control",
+     "id": "GO-04",
+     "title": "Name a business owner for the system's outcomes",
+     "priority": 2,
+     "due": "2026-10-24",
+     "late": 3,
+     "side": "owner",
+     "action": "Evidence expired. Ask Raj Patel for fresh evidence (request create)."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "HR-05",
+     "title": "Explain in plain words what the system does and its limits",
+     "priority": 2,
+     "due": "2026-10-24",
+     "late": 3,
+     "side": "owner",
+     "action": "Evidence expired. Ask Tamsin Clarke for fresh evidence (request create)."
+    },
+    {
+     "who": "Dario Fontana",
+     "kind": "control",
+     "id": "TP-13",
+     "title": "Know how to reach the vendor in an incident and how fast they respond",
+     "priority": 2,
+     "due": "2026-10-24",
+     "late": 3,
+     "side": "owner",
+     "action": "Evidence expired. Ask Dario Fontana for fresh evidence (request create)."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "GO-11",
+     "title": "Assess the impact on people's fundamental rights",
+     "priority": 0,
+     "due": "2026-11-02",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "DG-02",
+     "title": "Have a lawful basis and give notice when using personal data",
+     "priority": 0,
+     "due": "2026-11-05",
+     "late": 0,
+     "side": "us",
+     "action": "Message is written but not marked as sent. Send it, then tell the tool (control mark-sent)."
+    },
+    {
+     "who": "Dario Fontana",
+     "kind": "control",
+     "id": "DO-04",
+     "title": "Give people only the access they need, and review it",
+     "priority": 0,
+     "due": "2026-11-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-18 (REQ-055); waiting for the answer."
+    },
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DO-12",
+     "title": "Do not go live without AI Governance sign-off",
+     "priority": 0,
+     "due": "2026-11-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-058); waiting for the answer."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "GO-08",
+     "title": "Write down the intended purpose and check it is not a prohibited use",
+     "priority": 0,
+     "due": "2026-11-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-14 (REQ-034); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "HR-04",
+     "title": "Tell people when they are dealing with AI, and label AI content",
+     "priority": 0,
+     "due": "2026-11-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-063); waiting for the answer."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "TP-02",
+     "title": "Get the right terms in the vendor contract",
+     "priority": 0,
+     "due": "2026-11-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-048); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "GO-03",
+     "title": "Register the AI system in the company AI inventory",
+     "priority": 1,
+     "due": "2026-11-02",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DG-10",
+     "title": "Keep personal and confidential data out of prompts and logs",
+     "priority": 2,
+     "due": "2026-11-26",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "GO-19",
+     "title": "Retire or replace the AI system safely",
+     "priority": 2,
+     "due": "2026-11-26",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "HR-02",
+     "title": "Train and equip the reviewers",
+     "priority": 2,
+     "due": "2026-11-26",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "HR-10",
+     "title": "Check the system is usable and fair for people with different needs",
+     "priority": 2,
+     "due": "2026-11-26",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DG-06",
+     "title": "Check data quality before and during use",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "us",
+     "action": "Message is written but not marked as sent. Send it, then tell the tool (control mark-sent)."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "DG-11",
+     "title": "Set how long data is kept and how it is deleted",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "us",
+     "action": "Message is written but not marked as sent. Send it, then tell the tool (control mark-sent)."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "DO-02",
+     "title": "Watch fairness in live use",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-14 (REQ-054); waiting for the answer."
+    },
+    {
+     "who": "Dario Fontana",
+     "kind": "control",
+     "id": "DO-05",
+     "title": "Keep secrets and API keys safe",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-17 (REQ-056); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "DO-15",
+     "title": "Watch explainability signals in live use",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-18 (REQ-060); waiting for the answer."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "EA-02",
+     "title": "Keep evidence for the required period",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-18 (REQ-070); waiting for the answer."
+    },
+    {
+     "who": "Raj Patel",
+     "kind": "control",
+     "id": "GO-07",
+     "title": "Agree how risks are accepted and exceptions are recorded",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-033); waiting for the answer."
+    },
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "GO-14",
+     "title": "Agree what changes need approval again",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-17 (REQ-036); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "HR-08",
+     "title": "Offer a way to report problems",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-17 (REQ-066); waiting for the answer."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "TP-11",
+     "title": "Write down who is responsible for what between you and the vendor",
+     "priority": 2,
+     "due": "2026-12-01",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-17 (REQ-051); waiting for the answer."
+    },
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DG-03",
+     "title": "Honour withdrawal of consent and opt-outs all the way through",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "us",
+     "action": "Message is written but not marked as sent. Send it, then tell the tool (control mark-sent)."
+    },
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DG-13",
+     "title": "Collect and keep only the data you need",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "us",
+     "action": "Message is written but not marked as sent. Send it, then tell the tool (control mark-sent)."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "DO-01",
+     "title": "Watch accuracy and drift in live use",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-053); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "DO-13",
+     "title": "Be able to roll back and recover",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-14 (REQ-059); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "DO-16",
+     "title": "Review alert thresholds and how alerts are handled",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-17 (REQ-061); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "EA-01",
+     "title": "Check the decision journal is intact",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-14 (REQ-069); waiting for the answer."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "EA-08",
+     "title": "Be ready to report serious incidents to authorities",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-17 (REQ-071); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "GO-15",
+     "title": "Talk with the people the system affects",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-16 (REQ-037); waiting for the answer."
+    },
+    {
+     "who": "Raj Patel",
+     "kind": "control",
+     "id": "GO-16",
+     "title": "Keep a company-level AI risk register",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-038); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "HR-13",
+     "title": "Set a misuse policy and a way to report abuse",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-068); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "TP-04",
+     "title": "Agree how the vendor tells you about changes",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-14 (REQ-049); waiting for the answer."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "TP-07",
+     "title": "Have a plan for leaving or replacing the vendor",
+     "priority": 2,
+     "due": "2026-12-06",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-18 (REQ-050); waiting for the answer."
+    }
+   ],
+   "owners": [
+    {
+     "who": "Tamsin Clarke",
+     "open": 18,
+     "late": 2
+    },
+    {
+     "who": "Mei Lin Chen",
+     "open": 8,
+     "late": 2
+    },
+    {
+     "who": "Dario Fontana",
+     "open": 4,
+     "late": 2
+    },
+    {
+     "who": "Oren Weiss",
+     "open": 9,
+     "late": 1
+    },
+    {
+     "who": "Raj Patel",
+     "open": 3,
+     "late": 1
+    }
+   ],
+   "regulatory": [
+    {
+     "id": "iso",
+     "name": "ISO/IEC 42001",
+     "items": 38,
+     "counts": {
+      "in place": 11,
+      "partly in place": 9,
+      "in progress": 12,
+      "not determined": 0,
+      "by how AIGRCeler works": 4,
+      "no control applies": 2
+     }
+    },
+    {
+     "id": "eu",
+     "name": "EU AI Act",
+     "items": 31,
+     "counts": {
+      "in place": 6,
+      "partly in place": 8,
+      "in progress": 9,
+      "not determined": 5,
+      "by how AIGRCeler works": 2,
+      "no control applies": 1
+     }
+    },
+    {
+     "id": "nist",
+     "name": "NIST AI RMF",
+     "items": 72,
+     "counts": {
+      "in place": 24,
+      "partly in place": 17,
+      "in progress": 21,
+      "not determined": 0,
+      "by how AIGRCeler works": 7,
+      "no control applies": 3
+     }
+    }
+   ],
+   "decisions": {
+    "count": 187,
+    "intact": true,
+    "problems": [],
+    "recent": [
+     {
+      "seq": 187,
+      "time": "2026-10-26 09:00",
+      "type": "risk_acceptance",
+      "by": "Raj Patel",
+      "summary": "Accepted residual risk R-026 at level Critical until 2027-01-10"
+     },
+     {
+      "seq": 186,
+      "time": "2026-10-26 10:13",
+      "type": "incident_acknowledged",
+      "by": "Elena Marchetti",
+      "summary": "Incident INC-001 seen by AI Governance"
+     },
+     {
+      "seq": 185,
+      "time": "2026-10-25 11:26",
+      "type": "incident_opened",
+      "by": "Elena Marchetti",
+      "summary": "Incident INC-001 opened: fairness reading below the limit"
+     },
+     {
+      "seq": 184,
+      "time": "2026-10-25 12:39",
+      "type": "evidence_finding",
+      "by": "Oren Weiss",
+      "summary": "Evidence EV-009 judged satisfied for TP-05 (strong)"
+     },
+     {
+      "seq": 183,
+      "time": "2026-10-24 13:52",
+      "type": "request_sent",
+      "by": "Elena Marchetti",
+      "summary": "Message REQ-054 to Lila Brandt marked sent"
+     },
+     {
+      "seq": 182,
+      "time": "2026-10-24 14:05",
+      "type": "signoff_refused",
+      "by": "Elena Marchetti",
+      "summary": "Go decision not recorded: critical controls still open"
+     },
+     {
+      "seq": 181,
+      "time": "2026-10-23 15:18",
+      "type": "stage_started",
+      "by": "Elena Marchetti",
+      "summary": "Operate started"
+     },
+     {
+      "seq": 180,
+      "time": "2026-10-23 16:31",
+      "type": "stage_closed",
+      "by": "Elena Marchetti",
+      "summary": "Govern closed"
+     }
+    ],
+    "head": "9f3c2a71be04"
+   },
+   "counts": {
+    "open_incidents": 2,
+    "serious_incidents": 1,
+    "late": 8,
+    "waiting_us": 5,
+    "verifier_queue": 6,
+    "indicators_out": 1
+   },
+   "attention": [
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "serious",
+     "text": "Open high incident INC-001: Fairness reading for the lowest-scoring group is below the company's limit (version 4.2)",
+     "tab": "watch"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "serious",
+     "text": "1 required control(s) are past their due date (longest 4 days late).",
+     "tab": "controls"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "warning",
+     "text": "Open low incident INC-003: A candidate complained they were rejected without any human review",
+     "tab": "watch"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "warning",
+     "text": "7 other control(s) are past their due date.",
+     "tab": "controls"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "warning",
+     "text": "A review is also called for: incident INC-002 (medium) closed since the last review.",
+     "tab": "watch"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "warning",
+     "text": "Obligation due 2026-11-14 (in 18 days): Halvorsen Logistics: AI hiring-tool assurance pack due to the client",
+     "tab": "watch"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "warning",
+     "text": "Obligation due 2026-11-21 (in 25 days): Candidate notice that AI scores applications is published",
+     "tab": "watch"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "warning",
+     "text": "Evidence EV-004 for TP-04 expires in 9 day(s).",
+     "tab": "evidence"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "warning",
+     "text": "5 item(s) are waiting on us (messages not written or not marked as sent, or no owner).",
+     "tab": "chase"
+    },
+    {
+     "system": "talentlens",
+     "system_name": "TalentLens",
+     "severity": "info",
+     "text": "6 control(s) have evidence waiting for an independent check.",
+     "tab": "chase"
+    }
+   ]
+  },
+  {
+   "slug": "handbookbot",
+   "name": "HandbookBot",
+   "purpose": "An internal chatbot that answers staff questions from the public employee handbook. A third-party service; no personal data on its face.",
+   "lane": "light",
+   "lane_decided": true,
+   "lane_suggested": "light",
+   "tier": 1,
+   "sourcing": "third-party-service",
+   "current_stage": "GOVERN",
+   "stages": [
+    {
+     "id": "DISCOVER",
+     "status": "closed",
+     "started": "2026-10-18",
+     "closed": "2026-10-19"
+    },
+    {
+     "id": "ASSESS",
+     "status": "closed",
+     "started": "2026-10-19",
+     "closed": "2026-10-20"
+    },
+    {
+     "id": "GOVERN",
+     "status": "started",
+     "started": "2026-10-20",
+     "closed": null
+    },
+    {
+     "id": "OPERATE",
+     "status": "not_started",
+     "started": null,
+     "closed": null
+    }
+   ],
+   "go": {
+    "state": "not_in_operate",
+    "required": 8,
+    "done": 2,
+    "last": null,
+    "count": 0,
+    "blockers": []
+   },
+   "profile": {
+    "level": "light",
+    "required": 14,
+    "answered": 14,
+    "unknown": 0,
+    "open": 0,
+    "rate": 0.0,
+    "limit": 0.2
+   },
+   "controls": {
+    "total": 19,
+    "groups": {
+     "in_place": 7,
+     "in_progress": 3,
+     "waiting": 9,
+     "problem": 0,
+     "waived": 0
+    },
+    "by_area": [
+     {
+      "code": "GO",
+      "title": "Governance and organization",
+      "total": 7,
+      "states": {
+       "drafted": 2,
+       "approved": 0,
+       "assigned": 1,
+       "implementing": 0,
+       "evidenced": 1,
+       "verified": 3,
+       "monitored": 0,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 3,
+      "strength": {
+       "strong": 0,
+       "moderate": 3,
+       "weak": 0
+      }
+     },
+     {
+      "code": "DG",
+      "title": "Data",
+      "total": 3,
+      "states": {
+       "drafted": 1,
+       "approved": 0,
+       "assigned": 0,
+       "implementing": 0,
+       "evidenced": 1,
+       "verified": 1,
+       "monitored": 0,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 1,
+      "strength": {
+       "strong": 0,
+       "moderate": 1,
+       "weak": 0
+      }
+     },
+     {
+      "code": "TP",
+      "title": "Third party",
+      "total": 3,
+      "states": {
+       "drafted": 1,
+       "approved": 0,
+       "assigned": 1,
+       "implementing": 0,
+       "evidenced": 0,
+       "verified": 1,
+       "monitored": 0,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 1,
+      "strength": {
+       "strong": 0,
+       "moderate": 1,
+       "weak": 0
+      }
+     },
+     {
+      "code": "DO",
+      "title": "Deployment and operations",
+      "total": 4,
+      "states": {
+       "drafted": 1,
+       "approved": 0,
+       "assigned": 1,
+       "implementing": 0,
+       "evidenced": 1,
+       "verified": 1,
+       "monitored": 0,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 1,
+      "strength": {
+       "strong": 0,
+       "moderate": 1,
+       "weak": 0
+      }
+     },
+     {
+      "code": "HR",
+      "title": "Human oversight and rights",
+      "total": 1,
+      "states": {
+       "drafted": 1,
+       "approved": 0,
+       "assigned": 0,
+       "implementing": 0,
+       "evidenced": 0,
+       "verified": 0,
+       "monitored": 0,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 0,
+      "strength": {
+       "strong": 0,
+       "moderate": 0,
+       "weak": 0
+      }
+     },
+     {
+      "code": "EA",
+      "title": "Evidence and audit",
+      "total": 1,
+      "states": {
+       "drafted": 0,
+       "approved": 0,
+       "assigned": 0,
+       "implementing": 0,
+       "evidenced": 0,
+       "verified": 1,
+       "monitored": 0,
+       "rejected": 0,
+       "waived": 0,
+       "expired": 0
+      },
+      "in_place": 1,
+      "strength": {
+       "strong": 0,
+       "moderate": 1,
+       "weak": 0
+      }
+     }
+    ]
+   },
+   "control_rows": [
+    {
+     "id": "GO-01",
+     "title": "Name the AI Governance lead and a deputy",
+     "area": "GO",
+     "state": "verified",
+     "owner": "Raj Patel",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": true,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-03",
+     "title": "Register the AI system in the company AI inventory",
+     "area": "GO",
+     "state": "drafted",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": true,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-04",
+     "title": "Name a business owner for the system's outcomes",
+     "area": "GO",
+     "state": "assigned",
+     "owner": "Raj Patel",
+     "due": "2026-11-16",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "GO-05",
+     "title": "Set a simple acceptable-use rule for staff",
+     "area": "GO",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-06",
+     "title": "Give people who use or oversee the system basic AI training",
+     "area": "GO",
+     "state": "evidenced",
+     "owner": "Tamsin Clarke",
+     "due": "2026-11-08",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "GO-08",
+     "title": "Write down the intended purpose and check it is not a prohibited use",
+     "area": "GO",
+     "state": "drafted",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": null
+    },
+    {
+     "id": "GO-13",
+     "title": "Review the AI system and its controls every year",
+     "area": "GO",
+     "state": "verified",
+     "owner": "Tamsin Clarke",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DG-01",
+     "title": "Know your data: sources, owners and purpose",
+     "area": "DG",
+     "state": "drafted",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DG-08",
+     "title": "Protect data with access control and encryption",
+     "area": "DG",
+     "state": "evidenced",
+     "owner": "Dario Fontana",
+     "due": "2026-11-08",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "DG-12",
+     "title": "Know what data leaves the company when you use a vendor",
+     "area": "DG",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "TP-01",
+     "title": "Check the vendor before you rely on it",
+     "area": "TP",
+     "state": "assigned",
+     "owner": "Oren Weiss",
+     "due": "2026-11-16",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": true,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "TP-02",
+     "title": "Get the right terms in the vendor contract",
+     "area": "TP",
+     "state": "drafted",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "TP-06",
+     "title": "Keep the vendor's security assurance current",
+     "area": "TP",
+     "state": "verified",
+     "owner": "Dario Fontana",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "DO-04",
+     "title": "Give people only the access they need, and review it",
+     "area": "DO",
+     "state": "drafted",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": null
+    },
+    {
+     "id": "DO-05",
+     "title": "Keep secrets and API keys safe",
+     "area": "DO",
+     "state": "assigned",
+     "owner": "Dario Fontana",
+     "due": "2026-11-16",
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": "owner"
+    },
+    {
+     "id": "DO-07",
+     "title": "Have an incident plan that covers AI failures",
+     "area": "DO",
+     "state": "verified",
+     "owner": "Dario Fontana",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": null
+    },
+    {
+     "id": "DO-12",
+     "title": "Do not go live without AI Governance sign-off",
+     "area": "DO",
+     "state": "evidenced",
+     "owner": "Mei Lin Chen",
+     "due": "2026-11-08",
+     "late": 0,
+     "strength": null,
+     "critical": true,
+     "launch_required": true,
+     "waiting_on": "verifier"
+    },
+    {
+     "id": "HR-08",
+     "title": "Offer a way to report problems",
+     "area": "HR",
+     "state": "drafted",
+     "owner": null,
+     "due": null,
+     "late": 0,
+     "strength": null,
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    },
+    {
+     "id": "EA-02",
+     "title": "Keep evidence for the required period",
+     "area": "EA",
+     "state": "verified",
+     "owner": "Oren Weiss",
+     "due": null,
+     "late": 0,
+     "strength": "moderate",
+     "critical": false,
+     "launch_required": false,
+     "waiting_on": null
+    }
+   ],
+   "risk": {
+    "scored": true,
+    "as_of": "2026-10-21 11:02",
+    "inherent": 21.5,
+    "residual": 12.4,
+    "inherent_band": "Yellow",
+    "residual_band": "Green",
+    "unrated": 0,
+    "dimensions": [
+     {
+      "key": "accuracy",
+      "title": "Accuracy",
+      "max": 20,
+      "scenarios": 1,
+      "inherent": 6.0,
+      "residual": 4.0
+     },
+     {
+      "key": "fairness",
+      "title": "Fairness",
+      "max": 20,
+      "scenarios": 0,
+      "inherent": 0.0,
+      "residual": 0.0
+     },
+     {
+      "key": "data",
+      "title": "Data",
+      "max": 15,
+      "scenarios": 1,
+      "inherent": 5.0,
+      "residual": 3.0
+     },
+     {
+      "key": "security",
+      "title": "Security",
+      "max": 15,
+      "scenarios": 1,
+      "inherent": 5.5,
+      "residual": 3.4
+     },
+     {
+      "key": "oversight",
+      "title": "Oversight",
+      "max": 15,
+      "scenarios": 1,
+      "inherent": 5.0,
+      "residual": 2.0
+     },
+     {
+      "key": "regulatory",
+      "title": "Regulatory",
+      "max": 15,
+      "scenarios": 0,
+      "inherent": 0.0,
+      "residual": 0.0
+     }
+    ],
+    "scenarios": [
+     {
+      "id": "R-001",
+      "title": "The chatbot gives a wrong answer about leave or pay that staff act on",
+      "dimension": "accuracy",
+      "before": 6,
+      "before_level": "Medium",
+      "after": 4,
+      "after_level": "Low",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 1
+     },
+     {
+      "id": "R-002",
+      "title": "Staff paste personal details into the chatbot",
+      "dimension": "data",
+      "before": 6,
+      "before_level": "Medium",
+      "after": 3,
+      "after_level": "Low",
+      "floor_applied": false,
+      "rated": true,
+      "accepted": false,
+      "credits": 1
+     }
+    ],
+    "acceptances": []
+   },
+   "evidence": {
+    "total": 5,
+    "by_status": {
+     "accepted": 3,
+     "received": 2
+    },
+    "expiring": [],
+    "mismatch": []
+   },
+   "incidents": [],
+   "indicators": [],
+   "obligations": [],
+   "containment": [],
+   "exceptions": [],
+   "concerns": {
+    "open": 1,
+    "resolved": 4,
+    "list": [
+     {
+      "id": "CON-003",
+      "kind": "concern",
+      "text": "The handbook itself is out of date in two places, so correct answers may still be wrong.",
+      "carry_to": "GOVERN",
+      "raised": "2026-10-22"
+     }
+    ]
+   },
+   "assessments": [],
+   "blocks": [],
+   "review": null,
+   "chase": [
+    {
+     "who": "Mei Lin Chen",
+     "kind": "control",
+     "id": "DO-12",
+     "title": "Do not go live without AI Governance sign-off",
+     "priority": 0,
+     "due": "2026-11-08",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Oren Weiss",
+     "kind": "control",
+     "id": "TP-01",
+     "title": "Check the vendor before you rely on it",
+     "priority": 1,
+     "due": "2026-11-16",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-15 (REQ-033); waiting for the answer."
+    },
+    {
+     "who": "Dario Fontana",
+     "kind": "control",
+     "id": "DG-08",
+     "title": "Protect data with access control and encryption",
+     "priority": 2,
+     "due": "2026-11-08",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Tamsin Clarke",
+     "kind": "control",
+     "id": "GO-06",
+     "title": "Give people who use or oversee the system basic AI training",
+     "priority": 2,
+     "due": "2026-11-08",
+     "late": 0,
+     "side": "verifier",
+     "action": "Evidence is filed. Someone who neither owns the control nor sent the evidence must judge it (finding record)."
+    },
+    {
+     "who": "Dario Fontana",
+     "kind": "control",
+     "id": "DO-05",
+     "title": "Keep secrets and API keys safe",
+     "priority": 2,
+     "due": "2026-11-16",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-14 (REQ-034); waiting for the answer."
+    },
+    {
+     "who": "Raj Patel",
+     "kind": "control",
+     "id": "GO-04",
+     "title": "Name a business owner for the system's outcomes",
+     "priority": 2,
+     "due": "2026-11-16",
+     "late": 0,
+     "side": "owner",
+     "action": "Asked on 2026-10-18 (REQ-030); waiting for the answer."
+    }
+   ],
+   "owners": [
+    {
+     "who": "Dario Fontana",
+     "open": 2,
+     "late": 0
+    },
+    {
+     "who": "Mei Lin Chen",
+     "open": 1,
+     "late": 0
+    },
+    {
+     "who": "Oren Weiss",
+     "open": 1,
+     "late": 0
+    },
+    {
+     "who": "Raj Patel",
+     "open": 1,
+     "late": 0
+    },
+    {
+     "who": "Tamsin Clarke",
+     "open": 1,
+     "late": 0
+    }
+   ],
+   "regulatory": [
+    {
+     "id": "iso",
+     "name": "ISO/IEC 42001",
+     "items": 38,
+     "counts": {
+      "in place": 3,
+      "partly in place": 2,
+      "in progress": 4,
+      "not determined": 0,
+      "by how AIGRCeler works": 4,
+      "no control applies": 25
+     }
+    },
+    {
+     "id": "eu",
+     "name": "EU AI Act",
+     "items": 31,
+     "counts": {
+      "in place": 1,
+      "partly in place": 1,
+      "in progress": 1,
+      "not determined": 2,
+      "by how AIGRCeler works": 2,
+      "no control applies": 24
+     }
+    },
+    {
+     "id": "nist",
+     "name": "NIST AI RMF",
+     "items": 72,
+     "counts": {
+      "in place": 6,
+      "partly in place": 4,
+      "in progress": 6,
+      "not determined": 0,
+      "by how AIGRCeler works": 7,
+      "no control applies": 49
+     }
+    }
+   ],
+   "decisions": {
+    "count": 64,
+    "intact": true,
+    "problems": [],
+    "recent": [
+     {
+      "seq": 64,
+      "time": "2026-10-26 09:00",
+      "type": "stage_started",
+      "by": "Elena Marchetti",
+      "summary": "Govern started (light lane)"
+     },
+     {
+      "seq": 63,
+      "time": "2026-10-26 10:13",
+      "type": "risk_rescored",
+      "by": "AIGRCeler",
+      "summary": "Risk rescored: before 21.5, after 12.4"
+     },
+     {
+      "seq": 62,
+      "time": "2026-10-25 11:26",
+      "type": "stage_closed",
+      "by": "Elena Marchetti",
+      "summary": "Assess closed"
+     }
+    ],
+    "head": "9f3c2a71be04"
+   },
+   "counts": {
+    "open_incidents": 0,
+    "serious_incidents": 0,
+    "late": 0,
+    "waiting_us": 0,
+    "verifier_queue": 3,
+    "indicators_out": 0
+   },
+   "attention": [
+    {
+     "system": "handbookbot",
+     "system_name": "HandbookBot",
+     "severity": "info",
+     "text": "3 control(s) have evidence waiting for an independent check.",
+     "tab": "chase"
+    }
+   ]
+  }
+ ],
+ "people": [
+  {
+   "name": "Tamsin Clarke",
+   "type": "internal",
+   "roles": [
+    "Operations"
+   ],
+   "open": 19,
+   "late": 2,
+   "systems": [
+    "HandbookBot",
+    "TalentLens"
+   ]
+  },
+  {
+   "name": "Mei Lin Chen",
+   "type": "internal",
+   "roles": [
+    "Engineering and data science"
+   ],
+   "open": 9,
+   "late": 2,
+   "systems": [
+    "HandbookBot",
+    "TalentLens"
+   ]
+  },
+  {
+   "name": "Dario Fontana",
+   "type": "internal",
+   "roles": [
+    "Security"
+   ],
+   "open": 6,
+   "late": 2,
+   "systems": [
+    "HandbookBot",
+    "TalentLens"
+   ]
+  },
+  {
+   "name": "Oren Weiss",
+   "type": "internal",
+   "roles": [
+    "Legal and compliance",
+    "AI Governance deputy"
+   ],
+   "open": 10,
+   "late": 1,
+   "systems": [
+    "HandbookBot",
+    "TalentLens"
+   ]
+  },
+  {
+   "name": "Raj Patel",
+   "type": "internal",
+   "roles": [
+    "Executive leadership"
+   ],
+   "open": 4,
+   "late": 1,
+   "systems": [
+    "HandbookBot",
+    "TalentLens"
+   ]
+  },
+  {
+   "name": "Elena Marchetti",
+   "type": "internal",
+   "roles": [
+    "AI Governance"
+   ],
+   "open": 0,
+   "late": 0,
+   "systems": []
+  },
+  {
+   "name": "Jonas Berg",
+   "type": "internal",
+   "roles": [
+    "Operations"
+   ],
+   "open": 0,
+   "late": 0,
+   "systems": []
+  },
+  {
+   "name": "Lila Brandt",
+   "type": "external",
+   "roles": [],
+   "open": 0,
+   "late": 0,
+   "systems": []
+  }
+ ],
+ "orgrisks": [
+  {
+   "id": "ORG-001",
+   "title": "Kestrel can switch on new AI features without telling us",
+   "inherent": "High",
+   "residual": "High",
+   "accepted": false
+  }
+ ],
+ "exceptions": [
+  {
+   "id": "EX-001",
+   "what": "Oren Weiss owns the legal controls although he holds an AI Governance role.",
+   "expires": "2026-12-26",
+   "days_left": 60
+  }
+ ],
+ "obligations": [
+  {
+   "id": "OB-001",
+   "title": "Halvorsen Logistics: AI hiring-tool assurance pack due to the client",
+   "authority": "Client contract with Halvorsen Logistics",
+   "due": "2026-11-14",
+   "days_left": 18,
+   "status": "open",
+   "system": "TalentLens",
+   "slug": "talentlens"
+  },
+  {
+   "id": "OB-002",
+   "title": "Candidate notice that AI scores applications is published",
+   "authority": "Internal commitment",
+   "due": "2026-11-21",
+   "days_left": 25,
+   "status": "open",
+   "system": "TalentLens",
+   "slug": "talentlens"
+  }
+ ],
+ "expiring": [
+  {
+   "id": "EV-004",
+   "control": "TP-04",
+   "valid_until": "2026-11-05",
+   "days_left": 9,
+   "system": "TalentLens",
+   "slug": "talentlens"
+  },
+  {
+   "id": "EV-011",
+   "control": "DG-05",
+   "valid_until": "2026-11-20",
+   "days_left": 24,
+   "system": "TalentLens",
+   "slug": "talentlens"
+  }
+ ],
+ "acceptances": [
+  {
+   "risk": "R-026",
+   "title": "Brightwell cannot show a client how the tool decides",
+   "level": "Critical",
+   "by": [
+    "Raj Patel"
+   ],
+   "time": "2026-10-21",
+   "until": "2027-01-10",
+   "days_left": 75,
+   "system": "TalentLens",
+   "slug": "talentlens"
+  }
+ ],
+ "notes": {
+  "regulatory": "This is AIGRCeler's own mapping of where each requirement is met. It is not legal advice, it is not a statement that the company complies, and it is not a certification. Whether a duty applies to a given system is a question for counsel; certification is decided by an accredited body."
+ },
+ "history": [
+  {
+   "date": "2026-10-07",
+   "systems": {
+    "talentlens": {
+     "residual": 64.5,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 3,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 11
+    },
+    "handbookbot": {
+     "residual": 21.5,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 0,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-08",
+   "systems": {
+    "talentlens": {
+     "residual": 63.9,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 3,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 10
+    },
+    "handbookbot": {
+     "residual": 21.0,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 0,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-09",
+   "systems": {
+    "talentlens": {
+     "residual": 63.3,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 4,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 1,
+     "waiting_us": 10
+    },
+    "handbookbot": {
+     "residual": 20.6,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 0,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-10",
+   "systems": {
+    "talentlens": {
+     "residual": 62.7,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 5,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 1,
+     "waiting_us": 9
+    },
+    "handbookbot": {
+     "residual": 20.1,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 1,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-11",
+   "systems": {
+    "talentlens": {
+     "residual": 62.2,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 6,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 2,
+     "waiting_us": 9
+    },
+    "handbookbot": {
+     "residual": 19.7,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 1,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-12",
+   "systems": {
+    "talentlens": {
+     "residual": 61.6,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 7,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 2,
+     "waiting_us": 8
+    },
+    "handbookbot": {
+     "residual": 19.2,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 1,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-13",
+   "systems": {
+    "talentlens": {
+     "residual": 61.0,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 7,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 3,
+     "waiting_us": 8
+    },
+    "handbookbot": {
+     "residual": 18.8,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 2,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-14",
+   "systems": {
+    "talentlens": {
+     "residual": 60.4,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 8,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 3,
+     "waiting_us": 7
+    },
+    "handbookbot": {
+     "residual": 18.3,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 2,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-15",
+   "systems": {
+    "talentlens": {
+     "residual": 59.8,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 9,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 4,
+     "waiting_us": 7
+    },
+    "handbookbot": {
+     "residual": 17.9,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 2,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-16",
+   "systems": {
+    "talentlens": {
+     "residual": 59.2,
+     "inherent": 64.5,
+     "required_done": 2,
+     "required_total": 15,
+     "in_place": 10,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 5,
+     "waiting_us": 6
+    },
+    "handbookbot": {
+     "residual": 17.4,
+     "inherent": 21.5,
+     "required_done": 0,
+     "required_total": 8,
+     "in_place": 3,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-17",
+   "systems": {
+    "talentlens": {
+     "residual": 58.6,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 11,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 5,
+     "waiting_us": 6
+    },
+    "handbookbot": {
+     "residual": 16.9,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 3,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-18",
+   "systems": {
+    "talentlens": {
+     "residual": 58.1,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 11,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 6,
+     "waiting_us": 6
+    },
+    "handbookbot": {
+     "residual": 16.5,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 3,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-19",
+   "systems": {
+    "talentlens": {
+     "residual": 57.5,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 12,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 6,
+     "waiting_us": 5
+    },
+    "handbookbot": {
+     "residual": 16.0,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 4,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-20",
+   "systems": {
+    "talentlens": {
+     "residual": 56.9,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 13,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 7,
+     "waiting_us": 5
+    },
+    "handbookbot": {
+     "residual": 15.6,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 4,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-21",
+   "systems": {
+    "talentlens": {
+     "residual": 56.3,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 14,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 7,
+     "waiting_us": 4
+    },
+    "handbookbot": {
+     "residual": 15.1,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 4,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "systems": {
+    "talentlens": {
+     "residual": 55.7,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 15,
+     "controls": 69,
+     "open_incidents": 0,
+     "late": 8,
+     "waiting_us": 4
+    },
+    "handbookbot": {
+     "residual": 14.7,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 5,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "systems": {
+    "talentlens": {
+     "residual": 55.1,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 15,
+     "controls": 69,
+     "open_incidents": 1,
+     "late": 8,
+     "waiting_us": 3
+    },
+    "handbookbot": {
+     "residual": 14.2,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 5,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "systems": {
+    "talentlens": {
+     "residual": 54.6,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 16,
+     "controls": 69,
+     "open_incidents": 1,
+     "late": 8,
+     "waiting_us": 3
+    },
+    "handbookbot": {
+     "residual": 13.8,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 5,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "systems": {
+    "talentlens": {
+     "residual": 54.0,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 17,
+     "controls": 69,
+     "open_incidents": 1,
+     "late": 8,
+     "waiting_us": 2
+    },
+    "handbookbot": {
+     "residual": 13.3,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 6,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-26",
+   "systems": {
+    "talentlens": {
+     "residual": 53.4,
+     "inherent": 64.5,
+     "required_done": 3,
+     "required_total": 15,
+     "in_place": 18,
+     "controls": 69,
+     "open_incidents": 2,
+     "late": 8,
+     "waiting_us": 2
+    },
+    "handbookbot": {
+     "residual": 12.9,
+     "inherent": 21.5,
+     "required_done": 1,
+     "required_total": 8,
+     "in_place": 6,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  },
+  {
+   "date": "2026-10-27",
+   "systems": {
+    "talentlens": {
+     "residual": 52.8,
+     "inherent": 64.5,
+     "required_done": 4,
+     "required_total": 15,
+     "in_place": 19,
+     "controls": 69,
+     "open_incidents": 2,
+     "late": 8,
+     "waiting_us": 2
+    },
+    "handbookbot": {
+     "residual": 12.4,
+     "inherent": 21.5,
+     "required_done": 2,
+     "required_total": 8,
+     "in_place": 7,
+     "controls": 19,
+     "open_incidents": 0,
+     "late": 0,
+     "waiting_us": 1
+    }
+   }
+  }
+ ]
+}

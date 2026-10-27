@@ -1,0 +1,6015 @@
+{
+ "name": "AIGRCeler starter catalog",
+ "version": "1.1",
+ "note": "Starter set. The company adopts it as its own and AI Governance owns every change after adoption. Legal mappings are indicative pointers, not legal advice.",
+ "controls": [
+  {
+   "id": "GO-01",
+   "title": "Name the AI Governance lead and a deputy",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Someone with authority is accountable for how AI is governed here.",
+   "requirement": "Appoint a lead and a deputy for AI Governance, and record the appointment and what they may decide.",
+   "legal": [
+    "ISO 42001 5.3",
+    "NIST AI RMF GOVERN 2",
+    "EU AI Act Art. 17",
+    "ISO 42001 4.4",
+    "ISO 42001 5.1",
+    "ISO 42001 7.1",
+    "ISO 42001 A.3.2",
+    "NIST AI RMF GOVERN 2.1",
+    "NIST AI RMF GOVERN 2.3"
+   ],
+   "scenarios": [
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A signed note or charter names the lead and deputy",
+    "It states what they may approve and accept"
+   ],
+   "evidence_types": [
+    "signed appointment note or charter"
+   ],
+   "valid_days": 365,
+   "owner_role": "executive-leadership",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-02",
+   "title": "Adopt a short AI principles statement",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Everyone knows what the company will and will not do with AI.",
+   "requirement": "Leadership adopts a one-page statement of AI principles (fairness, safety, privacy, transparency, accountability) and shares it.",
+   "legal": [
+    "ISO 42001 5.2",
+    "NIST AI RMF GOVERN 1",
+    "ISO 42001 5.1",
+    "ISO 42001 6.2",
+    "ISO 42001 A.2.2",
+    "ISO 42001 A.2.3",
+    "ISO 42001 A.2.4",
+    "ISO 42001 A.6.1.2",
+    "ISO 42001 A.9.3",
+    "NIST AI RMF GOVERN 1.2",
+    "NIST AI RMF GOVERN 1.4",
+    "NIST AI RMF GOVERN 4.1",
+    "NIST AI RMF MAP 1.3"
+   ],
+   "scenarios": [
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The statement is dated and approved by leadership",
+    "It says how it relates to the company's security, privacy and ethics policies",
+    "A review date is set",
+    "Staff using AI can find it"
+   ],
+   "evidence_types": [
+    "the approved statement",
+    "where it is published"
+   ],
+   "valid_days": 365,
+   "owner_role": "executive-leadership",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-03",
+   "title": "Register the AI system in the company AI inventory",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "The company knows every AI system it runs, what it is for and who owns it.",
+   "requirement": "Record the system's name, purpose, owner, users, data used, vendor and where it runs in the AI inventory.",
+   "legal": [
+    "EU AI Act Art. 49",
+    "ISO 42001 A.6.2",
+    "NIST AI RMF MAP 1",
+    "ISO 42001 4.3",
+    "ISO 42001 A.4.2",
+    "NIST AI RMF GOVERN 1.6"
+   ],
+   "scenarios": [
+    "S-REG-02",
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The entry exists and is complete",
+    "It matches how the system is really used"
+   ],
+   "evidence_types": [
+    "screenshot or export of the inventory entry"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "spreadsheet",
+     "asset register",
+     "AIGRCeler project record"
+    ],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-04",
+   "title": "Name a business owner for the system's outcomes",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "One person answers for what the system does to customers and the business.",
+   "requirement": "Name a business owner who accepts responsibility for the system's results and for acting on problems.",
+   "legal": [
+    "NIST AI RMF GOVERN 2",
+    "ISO 42001 A.3",
+    "ISO 42001 5.3",
+    "ISO 42001 A.3.2",
+    "NIST AI RMF GOVERN 2.1",
+    "NIST AI RMF MEASURE 2.8"
+   ],
+   "scenarios": [
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The business owner is named in writing",
+    "They have confirmed they accept the role"
+   ],
+   "evidence_types": [
+    "written confirmation from the owner"
+   ],
+   "valid_days": 365,
+   "owner_role": "executive-leadership",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-05",
+   "title": "Set a simple acceptable-use rule for staff",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "security-and-resiliency",
+    "privacy"
+   ],
+   "objective": "Staff know what they may and may not do with AI tools.",
+   "requirement": "Publish a short rule: approved tools, what data may be entered, what needs a human check, and who to ask.",
+   "legal": [
+    "ISO 42001 A.9",
+    "NIST AI RMF GOVERN 4",
+    "ISO 42001 5.2",
+    "ISO 42001 7.3",
+    "ISO 42001 A.2.2",
+    "ISO 42001 A.2.3",
+    "ISO 42001 A.3.3",
+    "ISO 42001 A.9.2",
+    "EU AI Act Art. 26"
+   ],
+   "scenarios": [
+    "S-DAT-04",
+    "S-SEC-05",
+    "S-HUM-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The rule is published and dated",
+    "Staff have been told about it",
+    "Staff know how to raise a concern about AI use"
+   ],
+   "evidence_types": [
+    "the rule document",
+    "proof it was shared (email, intranet post)"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-06",
+   "title": "Give people who use or oversee the system basic AI training",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "People using the system understand what it can and cannot do.",
+   "requirement": "Train everyone who uses, reviews or oversees the system on its purpose, limits and how to report problems; repeat each year.",
+   "legal": [
+    "EU AI Act Art. 4",
+    "ISO 42001 A.4",
+    "NIST AI RMF GOVERN 2",
+    "ISO 42001 7.1",
+    "ISO 42001 7.2",
+    "ISO 42001 7.3",
+    "ISO 42001 A.4.6",
+    "NIST AI RMF GOVERN 2.2",
+    "NIST AI RMF GOVERN 4.1",
+    "NIST AI RMF MAP 3.4"
+   ],
+   "scenarios": [
+    "S-HUM-04",
+    "S-HUM-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A training outline exists",
+    "The people involved are listed as trained within the last year"
+   ],
+   "evidence_types": [
+    "training outline",
+    "attendance or completion list"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-07",
+   "title": "Agree how risks are accepted and exceptions are recorded",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Risks are accepted by the right people, in writing.",
+   "requirement": "Document who may accept which level of residual risk, how exceptions are requested, and how long they last.",
+   "legal": [
+    "ISO 42001 6.1",
+    "NIST AI RMF GOVERN 1",
+    "ISO 42001 5.1",
+    "ISO 42001 6.1.1",
+    "ISO 42001 6.1.2",
+    "ISO 42001 6.1.3",
+    "EU AI Act Art. 9",
+    "EU AI Act Art. 17",
+    "NIST AI RMF GOVERN 1.3",
+    "NIST AI RMF GOVERN 1.4",
+    "NIST AI RMF GOVERN 2.3",
+    "NIST AI RMF MAP 1.5",
+    "NIST AI RMF MANAGE 1.1",
+    "NIST AI RMF MANAGE 1.2",
+    "NIST AI RMF MANAGE 1.3",
+    "NIST AI RMF MANAGE 1.4"
+   ],
+   "scenarios": [
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The rule names roles for each risk level",
+    "It says how exceptions are recorded and when they end"
+   ],
+   "evidence_types": [
+    "the written rule or charter section"
+   ],
+   "valid_days": 365,
+   "owner_role": "executive-leadership",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-08",
+   "title": "Write down the intended purpose and check it is not a prohibited use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "safety"
+   ],
+   "objective": "The system is only used for what it was designed for, and never for banned uses.",
+   "requirement": "State the intended purpose, users and limits, and confirm in writing that the use is not one the law prohibits.",
+   "legal": [
+    "EU AI Act Art. 5",
+    "EU AI Act Art. 9",
+    "NIST AI RMF MAP 1",
+    "ISO 42001 A.6.2.2",
+    "ISO 42001 A.9.2",
+    "ISO 42001 A.9.3",
+    "ISO 42001 A.9.4",
+    "NIST AI RMF MAP 1.1",
+    "NIST AI RMF MAP 1.4",
+    "NIST AI RMF MAP 3.3"
+   ],
+   "scenarios": [
+    "S-REG-01",
+    "S-SEC-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Purpose and limits are written",
+    "A named person has checked the list of prohibited uses"
+   ],
+   "evidence_types": [
+    "purpose statement",
+    "signed prohibited-use check"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-09",
+   "title": "Record how the system is classified under the EU AI Act",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "The company knows which legal duties apply and why.",
+   "requirement": "Classify the system (prohibited, high-risk, transparency duty, minimal risk) and record the reasoning and date.",
+   "legal": [
+    "EU AI Act Art. 6",
+    "EU AI Act Annex III",
+    "EU AI Act Art. 8",
+    "NIST AI RMF GOVERN 1.1",
+    "NIST AI RMF MAP 1.1",
+    "NIST AI RMF MAP 4.1"
+   ],
+   "scenarios": [
+    "S-REG-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The classification and reasoning are written",
+    "Reclassification triggers are listed"
+   ],
+   "evidence_types": [
+    "classification memo"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-10",
+   "title": "Complete the legal steps required before a high-risk system goes live",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "safety"
+   ],
+   "objective": "A high-risk system is not placed on the market without its required checks.",
+   "requirement": "Complete and record the conformity assessment, declaration and registration that apply to the system.",
+   "legal": [
+    "EU AI Act Art. 43",
+    "EU AI Act Art. 47",
+    "EU AI Act Art. 49",
+    "ISO 42001 A.6.2.5",
+    "EU AI Act Art. 8",
+    "EU AI Act Art. 16",
+    "EU AI Act Art. 48"
+   ],
+   "scenarios": [
+    "S-REG-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "eu_high_risk"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The required assessment route is identified",
+    "Declaration and registration are complete or scheduled before launch"
+   ],
+   "evidence_types": [
+    "conformity assessment record",
+    "declaration",
+    "registration confirmation"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [
+    "GO-09",
+    "EA-03"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-11",
+   "title": "Assess the impact on people's fundamental rights",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "fairness",
+    "privacy"
+   ],
+   "objective": "The company has thought through how the system could affect people's rights before launch.",
+   "requirement": "Carry out and record an assessment of the groups affected, the rights at stake, the likelihood and severity of harm, and the measures taken.",
+   "legal": [
+    "EU AI Act Art. 27",
+    "GDPR Art. 35",
+    "NIST AI RMF MAP 5",
+    "ISO 42001 6.1.4",
+    "ISO 42001 8.4",
+    "ISO 42001 A.5.4"
+   ],
+   "scenarios": [
+    "S-FAI-01",
+    "S-REG-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "eu_high_risk"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The affected groups and rights are named",
+    "Harms are rated and each has a measure",
+    "Legal has reviewed it"
+   ],
+   "evidence_types": [
+    "impact assessment document"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-12",
+   "title": "List the obligations specific to your sector",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Rules that apply because of the industry are not missed.",
+   "requirement": "List the sector rules that touch this system (for example banking, health or insurance supervision) and show how each is met.",
+   "legal": [
+    "NIST AI RMF GOVERN 1",
+    "ISO 42001 A.2.3",
+    "NIST AI RMF GOVERN 1.1",
+    "NIST AI RMF MAP 1.1"
+   ],
+   "scenarios": [
+    "S-REG-07"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "regulated_sector"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The relevant rules are listed",
+    "Each has a named owner and a status"
+   ],
+   "evidence_types": [
+    "sector obligations checklist"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-13",
+   "title": "Review the AI system and its controls every year",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "The system and its controls still fit how it is really used.",
+   "requirement": "Once a year, review purpose, data, performance, incidents and controls, and record what changed.",
+   "legal": [
+    "ISO 42001 9.3",
+    "NIST AI RMF GOVERN 1",
+    "ISO 42001 4.4",
+    "ISO 42001 6.2",
+    "ISO 42001 A.2.4",
+    "NIST AI RMF GOVERN 1.5",
+    "NIST AI RMF MEASURE 1.2",
+    "NIST AI RMF MEASURE 2.13",
+    "NIST AI RMF MANAGE 2.2"
+   ],
+   "scenarios": [
+    "S-REG-02",
+    "S-ACC-02"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A dated review record exists",
+    "Decisions from the review are listed"
+   ],
+   "evidence_types": [
+    "annual review record"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-14",
+   "title": "Agree what changes need approval again",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "Important changes do not slip in unreviewed.",
+   "requirement": "Define which changes (purpose, data, model, vendor, users, new countries) must go back to AI Governance, and how they are submitted.",
+   "legal": [
+    "ISO 42001 A.6.2",
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 6.1.3",
+    "ISO 42001 6.3",
+    "ISO 42001 8.1",
+    "ISO 42001 A.6.1.3"
+   ],
+   "scenarios": [
+    "S-ACC-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The list of triggers is written",
+    "Engineering and operations know the route"
+   ],
+   "evidence_types": [
+    "change-trigger list",
+    "example of a change request"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-15",
+   "title": "Talk with the people the system affects",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "fairness"
+   ],
+   "objective": "The people affected have a say in how the system is built and used.",
+   "requirement": "Identify affected groups (for a workplace system, the workers and their representatives), ask for their views before launch and at least yearly, and record what changed because of it.",
+   "legal": [
+    "NIST AI RMF MAP 5",
+    "NIST AI RMF GOVERN 5",
+    "ISO 42001 4.2",
+    "ISO 42001 7.4",
+    "EU AI Act Art. 26",
+    "NIST AI RMF GOVERN 3.1",
+    "NIST AI RMF GOVERN 5.1",
+    "NIST AI RMF GOVERN 5.2",
+    "NIST AI RMF MAP 1.2",
+    "NIST AI RMF MAP 1.6",
+    "NIST AI RMF MAP 5.2"
+   ],
+   "scenarios": [
+    "S-FAI-01",
+    "S-HUM-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "customer_facing_automated"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Affected groups are listed",
+    "Their feedback and the response are recorded"
+   ],
+   "evidence_types": [
+    "engagement notes or survey summary"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-16",
+   "title": "Keep a company-level AI risk register",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Risks that belong to the company, not one system, are visible.",
+   "requirement": "Track company-level risks (AI skills, readiness, unclear accountability, complexity) with owners and review them twice a year.",
+   "legal": [
+    "ISO 42001 6.1",
+    "NIST AI RMF GOVERN 3",
+    "ISO 42001 4.1",
+    "ISO 42001 6.1.1",
+    "ISO 42001 7.1",
+    "NIST AI RMF MAP 1.5",
+    "NIST AI RMF MEASURE 3.1",
+    "NIST AI RMF MEASURE 3.2",
+    "NIST AI RMF MANAGE 2.3"
+   ],
+   "scenarios": [
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The register exists with owners",
+    "It was reviewed in the last six months"
+   ],
+   "evidence_types": [
+    "register export",
+    "review minutes"
+   ],
+   "valid_days": 180,
+   "owner_role": "executive-leadership",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-17",
+   "title": "Assess the impact of the AI system on individuals, groups and society",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "fairness",
+    "privacy",
+    "safety"
+   ],
+   "objective": "The company has weighed who the system helps and who it could harm, before launch and whenever its use changes.",
+   "requirement": "Write a short impact assessment: who is affected (including vulnerable groups), the benefits, the possible harms with their likelihood and severity, effects on society and the environment, the alternatives considered (including doing without AI), and the measures taken. Repeat it when the use changes and at each yearly review.",
+   "legal": [
+    "ISO 42001 A.5",
+    "NIST AI RMF MAP 5",
+    "ISO 42001 4.2",
+    "ISO 42001 6.1.4",
+    "ISO 42001 8.4",
+    "ISO 42001 A.5.2",
+    "ISO 42001 A.5.3",
+    "ISO 42001 A.5.4",
+    "ISO 42001 A.5.5",
+    "EU AI Act Art. 27",
+    "NIST AI RMF GOVERN 4.2",
+    "NIST AI RMF MAP 3.1",
+    "NIST AI RMF MAP 3.2",
+    "NIST AI RMF MAP 5.1",
+    "NIST AI RMF MEASURE 2.12",
+    "NIST AI RMF MANAGE 2.1"
+   ],
+   "scenarios": [
+    "S-FAI-01",
+    "S-HUM-05",
+    "S-REG-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Affected groups, including vulnerable ones, are named",
+    "Benefits, harms, likelihood and severity are written down",
+    "Alternatives, including no AI, were considered",
+    "The business owner and AI Governance have signed it off"
+   ],
+   "evidence_types": [
+    "impact assessment document"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "Start from the answers in the discovery record (who is affected, worst case, vulnerable groups). Keep it to two pages.",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-18",
+   "title": "Carry out your duties as provider, importer, distributor or authorised representative under the EU AI Act",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "safety"
+   ],
+   "objective": "When the company puts a high-risk AI system on the EU market, it does what the law asks of its role.",
+   "requirement": "Confirm the company's role with counsel and, for that role, record how each duty is met: technical documentation, conformity assessment and CE marking, registration, corrective actions and informing authorities, cooperation with authorities, and the appointed representative where the provider is outside the EU.",
+   "legal": [
+    "EU AI Act Art. 16",
+    "EU AI Act Art. 20",
+    "EU AI Act Art. 21",
+    "EU AI Act Art. 22",
+    "EU AI Act Art. 23",
+    "EU AI Act Art. 24",
+    "EU AI Act Art. 48"
+   ],
+   "scenarios": [
+    "S-REG-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "eu_high_risk"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Counsel has confirmed the company's role in writing",
+    "Each duty of that role has an owner and a status",
+    "A representative is appointed where one is required"
+   ],
+   "evidence_types": [
+    "counsel's note on the role",
+    "duty checklist"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [
+    "GO-09"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "GO-19",
+   "title": "Retire or replace the AI system safely",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "safety",
+    "accountability-and-transparency",
+    "privacy"
+   ],
+   "objective": "When the system is switched off or replaced, people, data and records are handled properly.",
+   "requirement": "Agree when and how the system will be retired or replaced: who decides, how users and affected people are told, what happens to the data and the model, which records are kept and for how long, and what takes over its work.",
+   "legal": [
+    "NIST AI RMF GOVERN 1.7",
+    "NIST AI RMF MANAGE 2.4"
+   ],
+   "scenarios": [
+    "S-REG-02",
+    "S-DAT-05",
+    "S-SEC-06"
+   ],
+   "type": "corrective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A retirement or replacement plan exists",
+    "Data deletion and record keeping are decided",
+    "Users and the systems that depend on it know the plan"
+   ],
+   "evidence_types": [
+    "retirement plan"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-01",
+   "title": "Know your data: sources, owners and purpose",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "privacy"
+   ],
+   "objective": "Every dataset the system uses is known, owned and used for a stated reason.",
+   "requirement": "List each dataset (source, owner, purpose, personal-data content, where kept) and keep the list current.",
+   "legal": [
+    "EU AI Act Art. 10",
+    "GDPR Art. 30",
+    "ISO 42001 A.7",
+    "ISO 42001 A.4.3",
+    "ISO 42001 A.7.2",
+    "EU AI Act Art. 17"
+   ],
+   "scenarios": [
+    "S-DAT-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Every dataset is listed with an owner",
+    "Personal data is flagged"
+   ],
+   "evidence_types": [
+    "data inventory"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "spreadsheet",
+     "data catalog tools such as OpenMetadata or DataHub"
+    ],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-02",
+   "title": "Have a lawful basis and give notice when using personal data",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy",
+    "accountability-and-transparency"
+   ],
+   "objective": "Personal data is used only with a valid reason and people are told.",
+   "requirement": "Identify the legal basis for each use of personal data and show the notice given to the people concerned.",
+   "legal": [
+    "GDPR Art. 6",
+    "GDPR Art. 13-14",
+    "NIST AI RMF MAP 2",
+    "ISO 42001 A.7.3"
+   ],
+   "scenarios": [
+    "S-DAT-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "personal_data",
+     "sensitive_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A lawful basis is recorded for each use",
+    "The notice text exists and has been published"
+   ],
+   "evidence_types": [
+    "lawful-basis record",
+    "copy of the notice"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-03",
+   "title": "Honour withdrawal of consent and opt-outs all the way through",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy"
+   ],
+   "objective": "When someone withdraws consent or opts out, it takes effect everywhere the data went.",
+   "requirement": "Provide a way to withdraw or opt out, and show that requests reach the training data, stored data and the vendors.",
+   "legal": [
+    "GDPR Art. 17",
+    "GDPR Art. 21",
+    "EU AI Act Art. 10"
+   ],
+   "scenarios": [
+    "S-DAT-02",
+    "S-DAT-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "personal_data",
+     "sensitive_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A request route exists",
+    "A test request was traced end to end",
+    "Time to complete is stated"
+   ],
+   "evidence_types": [
+    "process description",
+    "test request trace"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-04",
+   "title": "Carry out a data protection impact assessment where it is required",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy",
+    "accountability-and-transparency"
+   ],
+   "objective": "High-risk uses of personal data are assessed before they start.",
+   "requirement": "Run and record a data protection impact assessment, including measures to reduce each high risk.",
+   "legal": [
+    "GDPR Art. 35",
+    "NIST AI RMF MEASURE 2.10"
+   ],
+   "scenarios": [
+    "S-DAT-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "sensitive_data",
+     "decisions_about_people"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The assessment is complete",
+    "Remaining high risks are accepted by the right person"
+   ],
+   "evidence_types": [
+    "impact assessment document"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-05",
+   "title": "Check where training and reference data comes from",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability",
+    "accountability-and-transparency"
+   ],
+   "objective": "Data is trusted only after its source and integrity are checked.",
+   "requirement": "Validate each source (who supplied it, how, under what terms) and keep a chain of custody from source to use.",
+   "legal": [
+    "EU AI Act Art. 10",
+    "NIST AI RMF MEASURE 2",
+    "ISO 42001 A.7",
+    "ISO 42001 A.7.2",
+    "ISO 42001 A.7.3",
+    "ISO 42001 A.7.5"
+   ],
+   "scenarios": [
+    "S-DAT-01",
+    "S-DAT-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Each source is validated",
+    "A change history exists for each dataset"
+   ],
+   "evidence_types": [
+    "source validation notes",
+    "version or hash log"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "DVC",
+     "MLflow",
+     "OpenLineage"
+    ],
+    "howto": "Record where each dataset came from, who approved it, and a fingerprint (hash) of each version.",
+    "formats": [
+     "json",
+     "csv"
+    ]
+   }
+  },
+  {
+   "id": "DG-06",
+   "title": "Check data quality before and during use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability"
+   ],
+   "objective": "Bad data is caught before it harms results.",
+   "requirement": "Run automated checks (completeness, ranges, duplicates, freshness) on data that feeds the system, document how the data is cleaned and labelled, and act on failures.",
+   "legal": [
+    "EU AI Act Art. 10(3)",
+    "NIST AI RMF MEASURE 2",
+    "ISO 42001 A.7.4",
+    "ISO 42001 A.7.6",
+    "EU AI Act Art. 10"
+   ],
+   "scenarios": [
+    "S-DAT-01"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Checks run on a schedule",
+    "Failures raise an alert and are followed up"
+   ],
+   "evidence_types": [
+    "quality check report"
+   ],
+   "valid_days": 90,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "Great Expectations",
+     "Deequ",
+     "dbt tests"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv"
+    ]
+   }
+  },
+  {
+   "id": "DG-07",
+   "title": "Check that data represents the people affected",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "fairness",
+    "validity-and-reliability"
+   ],
+   "objective": "Training and test data reflects the people the system will meet.",
+   "requirement": "Compare the make-up of training and test data to the people affected; record gaps and what was done about them.",
+   "legal": [
+    "EU AI Act Art. 10(2)",
+    "NIST AI RMF MEASURE 2.11",
+    "ISO 42001 A.7",
+    "ISO 42001 A.7.4",
+    "EU AI Act Art. 10"
+   ],
+   "scenarios": [
+    "S-FAI-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "personal_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Groups compared are named",
+    "Gaps and responses are written down"
+   ],
+   "evidence_types": [
+    "representativeness report"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "Fairlearn",
+     "AIF360",
+     "Aequitas"
+    ],
+    "howto": "",
+    "formats": [
+     "csv",
+     "json",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "DG-08",
+   "title": "Protect data with access control and encryption",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "privacy"
+   ],
+   "objective": "Only the right people can reach the data, and it is protected in storage and on the move.",
+   "requirement": "Limit access to the data to named roles, encrypt it in storage and transit, and review who has access.",
+   "legal": [
+    "GDPR Art. 32",
+    "NIST AI RMF MANAGE 2",
+    "ISO 42001 A.7"
+   ],
+   "scenarios": [
+    "S-SEC-02",
+    "S-DAT-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Access is role-based",
+    "Encryption is on for storage and transfer",
+    "Access was reviewed this year"
+   ],
+   "evidence_types": [
+    "access list",
+    "encryption settings screenshot"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-09",
+   "title": "Protect training and reference data from tampering",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "validity-and-reliability"
+   ],
+   "objective": "Nobody can quietly alter the data the model learns from or looks up.",
+   "requirement": "Use integrity checks, restricted write access and review of unusual changes on training and reference data.",
+   "legal": [
+    "EU AI Act Art. 15",
+    "NIST AI RMF MEASURE 2.7",
+    "EU AI Act Art. 10"
+   ],
+   "scenarios": [
+    "S-DAT-03"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Write access is limited and logged",
+    "Integrity checks run and failures are followed up"
+   ],
+   "evidence_types": [
+    "access and integrity-check evidence"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "signed datasets",
+     "hash checks",
+     "anomaly detection on data"
+    ],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-10",
+   "title": "Keep personal and confidential data out of prompts and logs",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy",
+    "security-and-resiliency"
+   ],
+   "objective": "Sensitive information does not end up where it should not be.",
+   "requirement": "Block or mask personal and confidential data before it reaches the model, prompts or logs, and check the rule works.",
+   "legal": [
+    "GDPR Art. 25",
+    "GDPR Art. 32",
+    "NIST AI RMF MANAGE 2",
+    "NIST AI RMF MEASURE 2.10"
+   ],
+   "scenarios": [
+    "S-DAT-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "generative",
+     "personal_data",
+     "customer_facing_automated"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Masking or blocking is in place",
+    "A test with sample sensitive data was blocked or masked"
+   ],
+   "evidence_types": [
+    "settings evidence",
+    "test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "Microsoft Presidio",
+     "DLP tools"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "png"
+    ]
+   }
+  },
+  {
+   "id": "DG-11",
+   "title": "Set how long data is kept and how it is deleted",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy"
+   ],
+   "objective": "Data is not kept longer than needed and can be erased.",
+   "requirement": "Define retention periods for training data, prompts, outputs and logs, and show deletion works.",
+   "legal": [
+    "GDPR Art. 5(1)(e)",
+    "GDPR Art. 17"
+   ],
+   "scenarios": [
+    "S-DAT-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "personal_data",
+     "sensitive_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Periods are written",
+    "A deletion was tested"
+   ],
+   "evidence_types": [
+    "retention schedule",
+    "deletion test record"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-12",
+   "title": "Know what data leaves the company when you use a vendor",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy",
+    "security-and-resiliency",
+    "accountability-and-transparency"
+   ],
+   "objective": "Company data is not shared with a vendor by accident.",
+   "requirement": "Document what data is sent to each vendor, what the vendor may do with it, and confirm the settings (for example no training on your data).",
+   "legal": [
+    "GDPR Art. 28",
+    "NIST AI RMF MAP 4"
+   ],
+   "scenarios": [
+    "S-DAT-04",
+    "S-REG-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Data flows to the vendor are listed",
+    "Vendor use of your data is limited in writing"
+   ],
+   "evidence_types": [
+    "data flow note",
+    "vendor setting evidence"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-13",
+   "title": "Collect and keep only the data you need",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy"
+   ],
+   "objective": "The system uses the least personal data that does the job.",
+   "requirement": "Review each personal-data field and remove those not needed; record the decision.",
+   "legal": [
+    "GDPR Art. 5(1)(c)",
+    "GDPR Art. 25",
+    "ISO 42001 A.7.6"
+   ],
+   "scenarios": [
+    "S-DAT-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "personal_data",
+     "sensitive_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Each field has a reason",
+    "Unneeded fields were removed or justified"
+   ],
+   "evidence_types": [
+    "field review"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-14",
+   "title": "Extra safeguards for sensitive personal data",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy",
+    "safety"
+   ],
+   "objective": "Sensitive data (health, beliefs, biometrics and similar) gets stronger protection.",
+   "requirement": "Apply and record a specific legal ground, tighter access and stronger review for sensitive data.",
+   "legal": [
+    "GDPR Art. 9",
+    "EU AI Act Art. 10(5)",
+    "EU AI Act Art. 10"
+   ],
+   "scenarios": [
+    "S-DAT-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "sensitive_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A specific ground is recorded",
+    "Access is limited to named people"
+   ],
+   "evidence_types": [
+    "legal ground record",
+    "access list"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DG-15",
+   "title": "Keep a record of the data behind every trained version",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "You can show which data produced which version of the model.",
+   "requirement": "For every trained version record the datasets, filters and splits used.",
+   "legal": [
+    "EU AI Act Art. 11",
+    "EU AI Act Art. 10",
+    "ISO 42001 A.4.3",
+    "ISO 42001 A.7.5"
+   ],
+   "scenarios": [
+    "S-DAT-01",
+    "S-REG-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Each version links to its data",
+    "The record can be reproduced"
+   ],
+   "evidence_types": [
+    "lineage record"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "MLflow",
+     "DVC",
+     "OpenLineage"
+    ],
+    "howto": "",
+    "formats": [
+     "json"
+    ]
+   }
+  },
+  {
+   "id": "DG-16",
+   "title": "Test whether the model can reveal its training data",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy",
+    "security-and-resiliency"
+   ],
+   "objective": "The model does not give away the data it learned from.",
+   "requirement": "Run extraction and membership tests against the model and record what was found and fixed.",
+   "legal": [
+    "NIST AI RMF MEASURE 2.10"
+   ],
+   "scenarios": [
+    "S-DAT-04",
+    "S-SEC-04"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "generative",
+     "personal_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Tests were run on the current version",
+    "Findings were addressed"
+   ],
+   "evidence_types": [
+    "test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-01",
+   "title": "Document the model: design, training approach and limits",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "Anyone reviewing the model can see how it was built and where it should not be used.",
+   "requirement": "Write a model description covering purpose, design, training data and method, performance and known limits.",
+   "legal": [
+    "EU AI Act Art. 11",
+    "ISO 42001 A.6",
+    "NIST AI RMF MAP 2",
+    "ISO 42001 A.6.1.3",
+    "ISO 42001 A.6.2.3",
+    "ISO 42001 A.6.2.7",
+    "ISO 42001 A.8.2",
+    "NIST AI RMF MAP 2.1",
+    "NIST AI RMF MAP 2.2"
+   ],
+   "scenarios": [
+    "S-ACC-03",
+    "S-REG-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The description is complete and dated",
+    "Known limits are listed"
+   ],
+   "evidence_types": [
+    "model card or technical description"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "MD-02",
+   "title": "Set accuracy targets and test against them before release",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability"
+   ],
+   "objective": "The system is only released when it meets agreed performance targets.",
+   "requirement": "Agree measurable targets (accuracy, error rates) with the business, test the system against them on realistic data, and keep the results.",
+   "legal": [
+    "EU AI Act Art. 15",
+    "NIST AI RMF MEASURE 2.5",
+    "ISO 42001 A.6",
+    "ISO 42001 A.6.1.2",
+    "ISO 42001 A.6.2.2",
+    "ISO 42001 A.6.2.4",
+    "NIST AI RMF MAP 2.3",
+    "NIST AI RMF MEASURE 1.1",
+    "NIST AI RMF MEASURE 2.1",
+    "NIST AI RMF MEASURE 2.3",
+    "NIST AI RMF MEASURE 4.1"
+   ],
+   "scenarios": [
+    "S-ACC-01",
+    "S-ACC-03"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Targets are written and approved",
+    "Results on realistic data meet them",
+    "The model version tested is stated"
+   ],
+   "evidence_types": [
+    "test results file",
+    "test report"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "pytest and an evaluation harness",
+     "MLflow",
+     "Weights & Biases"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-03",
+   "title": "Test unusual and extreme inputs",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability",
+    "safety"
+   ],
+   "objective": "The system behaves safely when it meets something unexpected.",
+   "requirement": "Test boundary conditions, rare cases and bad inputs, and record how the system behaves and what was fixed.",
+   "legal": [
+    "EU AI Act Art. 15(4)",
+    "NIST AI RMF MEASURE 2.6",
+    "ISO 42001 A.6.2.4",
+    "EU AI Act Art. 15",
+    "NIST AI RMF MAP 2.3",
+    "NIST AI RMF MEASURE 2.3"
+   ],
+   "scenarios": [
+    "S-ACC-03"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "An edge-case list exists",
+    "Failures were fixed or accepted with a reason"
+   ],
+   "evidence_types": [
+    "edge-case test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-04",
+   "title": "Test the results for fairness across groups",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "fairness"
+   ],
+   "objective": "The system does not treat groups of people unfairly.",
+   "requirement": "Measure results for each relevant group, compare them against an agreed tolerance, and record fixes.",
+   "legal": [
+    "EU AI Act Art. 10(2)(f)",
+    "NIST AI RMF MEASURE 2.11",
+    "ISO 42001 A.6.2.4",
+    "NIST AI RMF MEASURE 4.2"
+   ],
+   "scenarios": [
+    "S-FAI-01"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "personal_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Groups and measures are named",
+    "Gaps are within tolerance or explained and accepted"
+   ],
+   "evidence_types": [
+    "fairness test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "Fairlearn",
+     "AIF360",
+     "Aequitas"
+    ],
+    "howto": "Choose the groups and the measure with Legal. Compare approval or error rates between groups and record the gap.",
+    "formats": [
+     "csv",
+     "json",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-05",
+   "title": "Make results explainable enough for the use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "explainability-and-interpretability"
+   ],
+   "objective": "People affected, and those who oversee the system, can understand why it produced a result.",
+   "requirement": "Provide explanations suited to the audience (reviewers, affected people) and test that they are understandable.",
+   "legal": [
+    "EU AI Act Art. 13",
+    "EU AI Act Art. 86",
+    "NIST AI RMF MEASURE 2.9",
+    "ISO 42001 A.6.2.4"
+   ],
+   "scenarios": [
+    "S-FAI-03",
+    "S-HUM-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Explanations exist for reviewers and for affected people",
+    "A sample was checked for being understandable"
+   ],
+   "evidence_types": [
+    "sample explanations",
+    "review notes"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "SHAP",
+     "LIME",
+     "InterpretML"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "pdf",
+     "png"
+    ]
+   }
+  },
+  {
+   "id": "MD-06",
+   "title": "Test resistance to deliberately misleading inputs",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "validity-and-reliability"
+   ],
+   "objective": "Attackers cannot easily fool the model.",
+   "requirement": "Run adversarial tests suited to the model type and record findings and fixes.",
+   "legal": [
+    "EU AI Act Art. 15(5)",
+    "NIST AI RMF MEASURE 2.7",
+    "ISO 42001 A.6.2.4",
+    "EU AI Act Art. 15"
+   ],
+   "scenarios": [
+    "S-SEC-01",
+    "S-ACC-03"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Tests ran on the current version",
+    "Serious findings were fixed"
+   ],
+   "evidence_types": [
+    "adversarial test report"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "Adversarial Robustness Toolbox",
+     "TextAttack",
+     "CleverHans"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-07",
+   "title": "Red-team the AI system",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "safety"
+   ],
+   "objective": "Skilled people try to break or misuse the system before real attackers do.",
+   "requirement": "Run a structured red-team exercise (jailbreaks, misuse, data extraction, harmful actions) on the system as deployed, and fix what is found.",
+   "legal": [
+    "EU AI Act Art. 15(5)",
+    "NIST AI RMF MEASURE 2.7",
+    "NIST AI RMF MANAGE 2",
+    "ISO 42001 A.6.2.4",
+    "EU AI Act Art. 15",
+    "NIST AI RMF GOVERN 4.3",
+    "NIST AI RMF MEASURE 1.3"
+   ],
+   "scenarios": [
+    "S-SEC-01",
+    "S-SEC-05",
+    "S-SEC-07"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "generative",
+     "customer_facing_automated",
+     "consequential_actions"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Scope and attack types are written",
+    "Findings are rated",
+    "High findings were fixed or accepted by the right person"
+   ],
+   "evidence_types": [
+    "red-team report",
+    "tool output",
+    "fix list"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "garak",
+     "PyRIT",
+     "promptfoo",
+     "Microsoft Counterfit"
+    ],
+    "howto": "Test the real deployed system, not only the model. Cover prompt injection, jailbreaks, data leakage, harmful content and misuse of any tools the system can call.",
+    "formats": [
+     "json",
+     "pdf",
+     "csv"
+    ]
+   }
+  },
+  {
+   "id": "MD-08",
+   "title": "Check the AI software code and libraries for weaknesses",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "The code and components are free of known security flaws.",
+   "requirement": "Scan the AI application's code and dependencies for vulnerabilities, fix serious findings and repeat on each release.",
+   "legal": [
+    "EU AI Act Art. 15",
+    "NIST AI RMF MANAGE 2"
+   ],
+   "scenarios": [
+    "S-SEC-03"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Scans cover code and dependencies",
+    "No unresolved serious findings"
+   ],
+   "evidence_types": [
+    "scan results"
+   ],
+   "valid_days": 90,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "Semgrep",
+     "CodeQL",
+     "Bandit",
+     "Trivy",
+     "pip-audit",
+     "Snyk"
+    ],
+    "howto": "Run the scanner in your build pipeline and send the SARIF or JSON result.",
+    "formats": [
+     "sarif",
+     "json",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-09",
+   "title": "Test the running system and its connections for weaknesses",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "Live interfaces, APIs and plug-ins resist attack.",
+   "requirement": "Test the running application, its APIs and any plug-ins with dynamic security testing and fix serious findings.",
+   "legal": [
+    "EU AI Act Art. 15"
+   ],
+   "scenarios": [
+    "S-SEC-03",
+    "S-SEC-01"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "customer_facing_automated",
+     "consequential_actions"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The live system and APIs were tested",
+    "Serious findings fixed"
+   ],
+   "evidence_types": [
+    "dynamic test report"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "OWASP ZAP",
+     "Burp Suite"
+    ],
+    "howto": "",
+    "formats": [
+     "sarif",
+     "json",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-10",
+   "title": "Test prompt injection and jailbreaks",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "Instructions hidden in inputs cannot take over the system.",
+   "requirement": "Test the system with known prompt-injection and jailbreak patterns, including indirect injection through documents and web content.",
+   "legal": [
+    "NIST AI RMF MEASURE 2.7",
+    "EU AI Act Art. 15"
+   ],
+   "scenarios": [
+    "S-SEC-01"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "generative"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A test set was run",
+    "Failures led to fixes or limits"
+   ],
+   "evidence_types": [
+    "test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "garak",
+     "promptfoo",
+     "PyRIT"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-11",
+   "title": "Filter harmful, wrong or confidential output",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "safety",
+    "security-and-resiliency",
+    "privacy"
+   ],
+   "objective": "Harmful or confidential content is stopped before it reaches a person.",
+   "requirement": "Put output checks in place (harmful content, confidential data, unsupported claims) and test that they work.",
+   "legal": [
+    "EU AI Act Art. 15",
+    "NIST AI RMF MANAGE 2"
+   ],
+   "scenarios": [
+    "S-ACC-01",
+    "S-SEC-05",
+    "S-DAT-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "generative"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Output checks are active",
+    "A test showed they block known bad cases"
+   ],
+   "evidence_types": [
+    "settings evidence",
+    "test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "png",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-12",
+   "title": "Control versions and approve each release",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "Only reviewed versions of the model, prompt and settings reach users.",
+   "requirement": "Keep the model, prompts and settings under version control and require a recorded approval for each release.",
+   "legal": [
+    "ISO 42001 A.6.2",
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 6.3",
+    "ISO 42001 A.4.4",
+    "ISO 42001 A.6.1.3",
+    "EU AI Act Art. 17"
+   ],
+   "scenarios": [
+    "S-ACC-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Everything is versioned",
+    "Each release has an approver"
+   ],
+   "evidence_types": [
+    "release log or screenshot of the process"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "git",
+     "MLflow model registry"
+    ],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "MD-13",
+   "title": "Re-test after any change",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability"
+   ],
+   "objective": "A change cannot silently make the system worse.",
+   "requirement": "After any change to model, data, prompts or settings, re-run the key tests and compare with the last accepted results.",
+   "legal": [
+    "EU AI Act Art. 15",
+    "NIST AI RMF MEASURE 4"
+   ],
+   "scenarios": [
+    "S-ACC-04",
+    "S-ACC-02"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Key tests re-run after change",
+    "Comparison with the previous version is kept"
+   ],
+   "evidence_types": [
+    "comparison report"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [
+    "MD-02"
+   ],
+   "model_bound": true,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "MD-14",
+   "title": "Make training reproducible",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "A past model version can be rebuilt and checked.",
+   "requirement": "Record code, data versions, settings and random seeds for each trained version.",
+   "legal": [
+    "EU AI Act Art. 11",
+    "ISO 42001 A.6.2.3",
+    "NIST AI RMF MEASURE 2.1"
+   ],
+   "scenarios": [
+    "S-REG-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Records exist for each version",
+    "A rebuild was tried once"
+   ],
+   "evidence_types": [
+    "reproducibility record"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "MLflow",
+     "DVC"
+    ],
+    "howto": "",
+    "formats": [
+     "json"
+    ]
+   }
+  },
+  {
+   "id": "MD-15",
+   "title": "Protect the model itself",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "The model cannot easily be copied or extracted.",
+   "requirement": "Restrict access to model files, limit and monitor query volumes, and alert on extraction-like behaviour.",
+   "legal": [
+    "EU AI Act Art. 15"
+   ],
+   "scenarios": [
+    "S-SEC-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Model files are access-controlled",
+    "Rate limits and monitoring are active"
+   ],
+   "evidence_types": [
+    "settings evidence"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "MD-16",
+   "title": "Test that generated answers stay grounded in facts",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability"
+   ],
+   "objective": "Generated answers are checked against trusted sources.",
+   "requirement": "Measure how often answers are unsupported or invented using a test set, and keep the result above an agreed level.",
+   "legal": [
+    "NIST AI RMF MEASURE 2.5"
+   ],
+   "scenarios": [
+    "S-ACC-01"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "generative"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A test set and target exist",
+    "Results meet the target"
+   ],
+   "evidence_types": [
+    "evaluation results"
+   ],
+   "valid_days": 90,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [
+     "RAGAS",
+     "TruLens",
+     "promptfoo"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv"
+    ]
+   }
+  },
+  {
+   "id": "TP-01",
+   "title": "Check the vendor before you rely on it",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "security-and-resiliency"
+   ],
+   "objective": "You know who you are depending on and what they do with AI.",
+   "requirement": "Do and record due diligence on the vendor: who they are, security practices, AI practices, where data is held.",
+   "legal": [
+    "ISO 42001 A.10",
+    "NIST AI RMF GOVERN 6",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF GOVERN 6.1"
+   ],
+   "scenarios": [
+    "S-REG-04",
+    "S-SEC-08"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A due-diligence note exists",
+    "Concerns are listed with decisions"
+   ],
+   "evidence_types": [
+    "due-diligence note"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-02",
+   "title": "Get the right terms in the vendor contract",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "privacy"
+   ],
+   "objective": "The contract covers data use, audit, incident notice and liability.",
+   "requirement": "Make sure the contract covers data use limits, security, incident notice time, audit rights, sub-suppliers and liability.",
+   "legal": [
+    "GDPR Art. 28",
+    "EU AI Act Art. 25",
+    "ISO 42001 A.10.2",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF GOVERN 6.1",
+    "NIST AI RMF MAP 4.1"
+   ],
+   "scenarios": [
+    "S-REG-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Each topic is covered or a gap is accepted in writing"
+   ],
+   "evidence_types": [
+    "contract clause checklist"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-03",
+   "title": "Obtain the vendor's documentation and stated limits",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "You know what the vendor says the system can and cannot do.",
+   "requirement": "Obtain and file the vendor's model documentation, intended use, known limits and update policy.",
+   "legal": [
+    "EU AI Act Art. 13",
+    "NIST AI RMF MAP 4",
+    "ISO 42001 A.10.3",
+    "EU AI Act Art. 51-55",
+    "NIST AI RMF MAP 4.2"
+   ],
+   "scenarios": [
+    "S-ACC-05",
+    "S-ACC-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Documents are on file",
+    "Stated limits are compared with your use"
+   ],
+   "evidence_types": [
+    "vendor documents",
+    "comparison note"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-04",
+   "title": "Agree how the vendor tells you about changes",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "You hear about model or version changes before your users feel them.",
+   "requirement": "Agree a change-notice route and notice period, and check that notices reach the right person.",
+   "legal": [
+    "NIST AI RMF MANAGE 3",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF MANAGE 3.1",
+    "NIST AI RMF MANAGE 3.2"
+   ],
+   "scenarios": [
+    "S-ACC-05"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "third-party-service",
+     "embedded-in-vendor-product",
+     "adapted-from-third-party-base"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The route and period are written",
+    "A recent notice reached the right person"
+   ],
+   "evidence_types": [
+    "agreement text",
+    "example notice"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-05",
+   "title": "Test the vendor's system on your own cases",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability",
+    "fairness"
+   ],
+   "objective": "The vendor's claims hold for your data and users.",
+   "requirement": "Test the vendor's system on a realistic sample of your own cases, including fairness and unusual inputs, before relying on it.",
+   "legal": [
+    "EU AI Act Art. 26",
+    "NIST AI RMF MEASURE 2.1",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF MAP 4.2",
+    "NIST AI RMF MEASURE 2.3",
+    "NIST AI RMF MEASURE 4.1",
+    "NIST AI RMF MANAGE 3.2"
+   ],
+   "scenarios": [
+    "S-ACC-01",
+    "S-FAI-01",
+    "S-ACC-03"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "third-party-service",
+     "embedded-in-vendor-product",
+     "adapted-from-third-party-base"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Test set reflects real use",
+    "Results meet your targets"
+   ],
+   "evidence_types": [
+    "test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "TP-06",
+   "title": "Keep the vendor's security assurance current",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "The vendor's security claims are independently supported.",
+   "requirement": "Obtain the vendor's current security attestation (for example SOC 2 or ISO 27001) and review exceptions.",
+   "legal": [
+    "NIST AI RMF GOVERN 6",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF MANAGE 3.1"
+   ],
+   "scenarios": [
+    "S-SEC-08"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Report is current",
+    "Exceptions reviewed"
+   ],
+   "evidence_types": [
+    "attestation report",
+    "review note"
+   ],
+   "valid_days": 365,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-07",
+   "title": "Have a plan for leaving or replacing the vendor",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability"
+   ],
+   "objective": "A vendor failure or exit does not stop the business.",
+   "requirement": "Write and keep a plan for switching or stopping the system, including data return.",
+   "legal": [
+    "NIST AI RMF GOVERN 6",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF GOVERN 6.2"
+   ],
+   "scenarios": [
+    "S-ACC-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The plan exists",
+    "Data return is covered"
+   ],
+   "evidence_types": [
+    "exit plan"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-08",
+   "title": "Check licences and open-source obligations",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Model and software licences allow your use.",
+   "requirement": "List the licences of models, data and software and confirm your use complies.",
+   "legal": [
+    "NIST AI RMF GOVERN 6",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF GOVERN 6.1",
+    "NIST AI RMF MAP 4.1"
+   ],
+   "scenarios": [
+    "S-REG-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Licences are listed",
+    "Restrictions are checked against use"
+   ],
+   "evidence_types": [
+    "licence register"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-09",
+   "title": "Check downloaded models and components are genuine and safe",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "Third-party models and libraries have not been tampered with.",
+   "requirement": "Verify source and fingerprints of downloaded models and libraries, scan them, and keep a bill of materials.",
+   "legal": [
+    "NIST AI RMF MANAGE 2",
+    "ISO 42001 A.4.4",
+    "ISO 42001 A.10.3",
+    "NIST AI RMF MAP 4.2",
+    "NIST AI RMF MANAGE 3.2"
+   ],
+   "scenarios": [
+    "S-SEC-08"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Source and fingerprints are checked",
+    "A bill of materials exists"
+   ],
+   "evidence_types": [
+    "scan output",
+    "bill of materials"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "ModelScan",
+     "Trivy",
+     "CycloneDX / SPDX SBOM tools"
+    ],
+    "howto": "",
+    "formats": [
+     "sarif",
+     "json"
+    ]
+   }
+  },
+  {
+   "id": "TP-10",
+   "title": "Review where the vendor and its sub-suppliers hold your data",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "privacy"
+   ],
+   "objective": "You know which companies and countries handle your data.",
+   "requirement": "List the vendor's sub-suppliers and data locations and confirm transfers are lawful.",
+   "legal": [
+    "GDPR Art. 28",
+    "GDPR Art. 44-49",
+    "ISO 42001 A.10.3"
+   ],
+   "scenarios": [
+    "S-DAT-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "personal_data",
+     "sensitive_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Sub-suppliers and locations are listed",
+    "Transfer basis is recorded"
+   ],
+   "evidence_types": [
+    "sub-supplier list",
+    "transfer note"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-11",
+   "title": "Write down who is responsible for what between you and the vendor",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "It is clear which duties sit with the vendor and which with you.",
+   "requirement": "Record the split of responsibilities (provider, deployer, other parties) for each legal and operating duty.",
+   "legal": [
+    "EU AI Act Art. 25",
+    "EU AI Act Art. 26",
+    "ISO 42001 A.10.2"
+   ],
+   "scenarios": [
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The split is written",
+    "Gaps have an owner"
+   ],
+   "evidence_types": [
+    "responsibility table"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-12",
+   "title": "Record what the base model and your fine-tuning data bring",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "fairness"
+   ],
+   "objective": "Limits and risks inherited from a base model are known.",
+   "requirement": "Document the base model, its known limits and the data used to adapt it.",
+   "legal": [
+    "EU AI Act Art. 11",
+    "NIST AI RMF MAP 4",
+    "ISO 42001 A.10.3",
+    "EU AI Act Art. 51-55",
+    "NIST AI RMF MAP 4.1",
+    "NIST AI RMF MANAGE 3.2"
+   ],
+   "scenarios": [
+    "S-FAI-02",
+    "S-ACC-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Base model and tuning data are documented",
+    "Inherited limits are listed"
+   ],
+   "evidence_types": [
+    "adaptation record"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-13",
+   "title": "Know how to reach the vendor in an incident and how fast they respond",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "accountability-and-transparency"
+   ],
+   "objective": "When something goes wrong, the vendor can be reached and acts fast.",
+   "requirement": "Record vendor incident contacts and response times and test the route once a year.",
+   "legal": [
+    "EU AI Act Art. 73",
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 A.8.4",
+    "NIST AI RMF GOVERN 6.2",
+    "NIST AI RMF MANAGE 4.3"
+   ],
+   "scenarios": [
+    "S-REG-05"
+   ],
+   "type": "corrective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Contacts and times are recorded",
+    "The route was tested"
+   ],
+   "evidence_types": [
+    "contact sheet",
+    "test record"
+   ],
+   "valid_days": 365,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "TP-14",
+   "title": "Get the documentation and terms from the provider of the general-purpose AI model you rely on",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "validity-and-reliability"
+   ],
+   "objective": "You know what the model provider has told you about its model, how it was trained and what it cannot do.",
+   "requirement": "Obtain from the model provider the information it must make available to those who build on its model (what it can do, its limits, a summary of how it was trained, how to use it safely) and its policy on copyright and data use, and compare it with your use.",
+   "legal": [
+    "EU AI Act Art. 51-55",
+    "EU AI Act Art. 25",
+    "ISO 42001 A.10.3"
+   ],
+   "scenarios": [
+    "S-ACC-05",
+    "S-REG-04"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "adapted-from-third-party-base",
+     "third-party-service",
+     "self-hosted-open-source",
+     "embedded-in-vendor-product"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "generative"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The provider's documentation is on file",
+    "Its stated limits were compared with your use",
+    "Its policy on data and copyright was read"
+   ],
+   "evidence_types": [
+    "provider documents",
+    "comparison note"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-01",
+   "title": "Watch accuracy and drift in live use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability"
+   ],
+   "objective": "Loss of quality is noticed early.",
+   "requirement": "Track key quality measures in production, set tolerances, and alert when they are crossed.",
+   "legal": [
+    "EU AI Act Art. 72",
+    "NIST AI RMF MEASURE 2.4",
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 8.2",
+    "ISO 42001 9.1",
+    "ISO 42001 A.6.2.6",
+    "NIST AI RMF MEASURE 1.1",
+    "NIST AI RMF MEASURE 4.1",
+    "NIST AI RMF MEASURE 4.3",
+    "NIST AI RMF MANAGE 2.2",
+    "NIST AI RMF MANAGE 3.1",
+    "NIST AI RMF MANAGE 4.1"
+   ],
+   "scenarios": [
+    "S-ACC-02"
+   ],
+   "type": "detective",
+   "max_steps": 2,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Measures and tolerances are defined",
+    "Alerts reach a named person",
+    "Readings are recorded"
+   ],
+   "evidence_types": [
+    "monitoring dashboard export",
+    "alert settings"
+   ],
+   "valid_days": 90,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "Evidently",
+     "WhyLabs",
+     "Arize",
+     "built-in vendor dashboards"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "png"
+    ]
+   }
+  },
+  {
+   "id": "DO-02",
+   "title": "Watch fairness in live use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "fairness"
+   ],
+   "objective": "Unfair patterns that appear in real use are noticed.",
+   "requirement": "Track the fairness measure chosen in testing on live results and alert on drift.",
+   "legal": [
+    "EU AI Act Art. 72",
+    "NIST AI RMF MEASURE 2.11",
+    "ISO 42001 9.1",
+    "ISO 42001 A.6.2.6",
+    "NIST AI RMF MANAGE 4.1"
+   ],
+   "scenarios": [
+    "S-FAI-01"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "personal_data"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Measure and tolerance are defined",
+    "Readings are recorded"
+   ],
+   "evidence_types": [
+    "fairness monitoring export"
+   ],
+   "valid_days": 90,
+   "owner_role": "operations",
+   "depends_on": [
+    "MD-04"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "csv",
+     "png"
+    ]
+   }
+  },
+  {
+   "id": "DO-03",
+   "title": "Watch for attacks and strange inputs",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "Attacks and abuse show up quickly.",
+   "requirement": "Monitor for unusual input patterns, spikes and policy-violating use, with alerts to Security.",
+   "legal": [
+    "EU AI Act Art. 15",
+    "NIST AI RMF MANAGE 2",
+    "ISO 42001 A.6.2.6",
+    "NIST AI RMF MEASURE 3.1",
+    "NIST AI RMF MANAGE 2.3",
+    "NIST AI RMF MANAGE 4.1"
+   ],
+   "scenarios": [
+    "S-SEC-01",
+    "S-SEC-05"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Detection rules exist",
+    "Alerts reach Security"
+   ],
+   "evidence_types": [
+    "detection settings",
+    "sample alert"
+   ],
+   "valid_days": 90,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "png"
+    ]
+   }
+  },
+  {
+   "id": "DO-04",
+   "title": "Give people only the access they need, and review it",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "Access to the system, data and settings is limited and reviewed.",
+   "requirement": "Use role-based, least-privilege access to the AI system, its data and its settings, and review the list at least twice a year.",
+   "legal": [
+    "GDPR Art. 32",
+    "NIST AI RMF MANAGE 2",
+    "EU AI Act Art. 15"
+   ],
+   "scenarios": [
+    "S-SEC-02"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Access is by role",
+    "Admin access is limited",
+    "The list was reviewed in the last six months"
+   ],
+   "evidence_types": [
+    "access list with review date"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-05",
+   "title": "Keep secrets and API keys safe",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "Keys and passwords cannot leak or be misused.",
+   "requirement": "Store keys in a secret manager, rotate them, and keep them out of code and prompts.",
+   "legal": [
+    "NIST AI RMF MANAGE 2"
+   ],
+   "scenarios": [
+    "S-SEC-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "No keys in code",
+    "Rotation period is set"
+   ],
+   "evidence_types": [
+    "secret-manager settings",
+    "scan result"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "cloud secret managers",
+     "gitleaks",
+     "truffleHog"
+    ],
+    "howto": "",
+    "formats": [
+     "json",
+     "sarif",
+     "png"
+    ]
+   }
+  },
+  {
+   "id": "DO-06",
+   "title": "Keep logs that let you trace what the system did",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Decisions can be reconstructed afterwards.",
+   "requirement": "Log inputs, outputs, versions and human actions in a protected store for the required period.",
+   "legal": [
+    "EU AI Act Art. 12",
+    "EU AI Act Art. 19",
+    "EU AI Act Art. 26(6)",
+    "ISO 42001 A.6.2.8",
+    "EU AI Act Art. 26"
+   ],
+   "scenarios": [
+    "S-REG-02",
+    "S-REG-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Logs cover inputs, outputs and versions",
+    "They are protected from change",
+    "Retention is set"
+   ],
+   "evidence_types": [
+    "log configuration evidence",
+    "sample trace"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "png",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "DO-07",
+   "title": "Have an incident plan that covers AI failures",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "accountability-and-transparency",
+    "safety"
+   ],
+   "objective": "Problems are handled fast and by the right people.",
+   "requirement": "Write an incident plan with a severity scale, who is told and how fast, regulator notice duties and a named contact.",
+   "legal": [
+    "EU AI Act Art. 73",
+    "GDPR Art. 33",
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 8.3",
+    "ISO 42001 10.2",
+    "ISO 42001 A.8.3",
+    "ISO 42001 A.8.4",
+    "EU AI Act Art. 20",
+    "NIST AI RMF GOVERN 4.3",
+    "NIST AI RMF MEASURE 3.1",
+    "NIST AI RMF MANAGE 2.3",
+    "NIST AI RMF MANAGE 4.3"
+   ],
+   "scenarios": [
+    "S-REG-05"
+   ],
+   "type": "corrective",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Severity scale and response times are written",
+    "A named contact exists",
+    "Notice duties are listed"
+   ],
+   "evidence_types": [
+    "incident plan"
+   ],
+   "valid_days": 365,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-08",
+   "title": "Practise the incident plan",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "accountability-and-transparency"
+   ],
+   "objective": "The team can act under pressure.",
+   "requirement": "Run a table-top exercise on an AI incident each year and record lessons.",
+   "legal": [
+    "NIST AI RMF MANAGE 4",
+    "NIST AI RMF GOVERN 4.3"
+   ],
+   "scenarios": [
+    "S-REG-05"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "An exercise was held in the last year",
+    "Lessons were recorded"
+   ],
+   "evidence_types": [
+    "exercise notes"
+   ],
+   "valid_days": 365,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-09",
+   "title": "Be able to stop or isolate the system quickly (circuit breaker)",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "safety",
+    "security-and-resiliency"
+   ],
+   "objective": "A runaway system can be stopped before it does lasting harm.",
+   "requirement": "Provide a tested way to stop or isolate the system or its actions quickly, and name who may use it.",
+   "legal": [
+    "EU AI Act Art. 14(4)(e)",
+    "NIST AI RMF MANAGE 2",
+    "EU AI Act Art. 14",
+    "NIST AI RMF MANAGE 2.4"
+   ],
+   "scenarios": [
+    "S-SEC-06",
+    "S-SEC-07"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "consequential_actions",
+     "many_dependencies"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A stop mechanism exists",
+    "A test showed it works",
+    "Named people can use it"
+   ],
+   "evidence_types": [
+    "description",
+    "test record"
+   ],
+   "valid_days": 180,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "feature flags",
+     "API gateway",
+     "kill switch"
+    ],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-10",
+   "title": "Map what depends on the system and what could cascade",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "safety",
+    "validity-and-reliability"
+   ],
+   "objective": "A failure here does not take down other things unnoticed.",
+   "requirement": "Map downstream systems and processes and analyze how a failure would spread.",
+   "legal": [
+    "NIST AI RMF MAP 4",
+    "ISO 42001 A.4.5"
+   ],
+   "scenarios": [
+    "S-SEC-06"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "consequential_actions",
+     "many_dependencies"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The map is current",
+    "Cascade risks have mitigations"
+   ],
+   "evidence_types": [
+    "dependency map",
+    "analysis note"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-11",
+   "title": "Protect the build and deployment pipeline",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency"
+   ],
+   "objective": "Nobody can alter what is released without being noticed.",
+   "requirement": "Control and log access to build, training and deployment pipelines and sign what is released.",
+   "legal": [
+    "NIST AI RMF MANAGE 2",
+    "ISO 42001 A.4.4"
+   ],
+   "scenarios": [
+    "S-SEC-03",
+    "S-DAT-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base",
+     "self-hosted-open-source"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Access is limited and logged",
+    "Releases are signed or verified"
+   ],
+   "evidence_types": [
+    "pipeline settings evidence"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-12",
+   "title": "Do not go live without AI Governance sign-off",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "The system cannot go live until its required controls are approved and verified.",
+   "requirement": "Make go-live depend on the launch-status file or an equivalent recorded sign-off, and show the step in your release process.",
+   "legal": [
+    "EU AI Act Art. 17",
+    "NIST AI RMF MANAGE 1",
+    "ISO 42001 8.1",
+    "ISO 42001 A.6.2.5",
+    "NIST AI RMF MANAGE 1.1"
+   ],
+   "scenarios": [
+    "S-REG-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The release process checks the sign-off",
+    "A release was blocked or passed on that basis"
+   ],
+   "evidence_types": [
+    "pipeline step or checklist",
+    "example release record"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "The tool publishes a small status file for each AI system. Your engineers can have the release pipeline read it.",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-13",
+   "title": "Be able to roll back and recover",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability",
+    "safety"
+   ],
+   "objective": "A bad change can be undone fast.",
+   "requirement": "Keep a tested rollback and recovery plan for the model, prompts and data.",
+   "legal": [
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 A.4.5",
+    "ISO 42001 A.6.2.5",
+    "NIST AI RMF GOVERN 6.2"
+   ],
+   "scenarios": [
+    "S-ACC-04",
+    "S-SEC-06"
+   ],
+   "type": "corrective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The plan exists",
+    "A rollback was tested"
+   ],
+   "evidence_types": [
+    "plan",
+    "test record"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-14",
+   "title": "Limit what an AI agent can do on its own",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "safety",
+    "security-and-resiliency"
+   ],
+   "objective": "An agent cannot cause serious harm through its tools.",
+   "requirement": "Allow only listed tools and actions, cap spending and volume, and require a person's approval for irreversible or high-impact actions.",
+   "legal": [
+    "EU AI Act Art. 14",
+    "NIST AI RMF MANAGE 2"
+   ],
+   "scenarios": [
+    "S-SEC-07"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "consequential_actions"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Tools and limits are listed",
+    "Approval is required for high-impact actions",
+    "A test confirmed the limits hold"
+   ],
+   "evidence_types": [
+    "configuration evidence",
+    "test results"
+   ],
+   "valid_days": 180,
+   "owner_role": "security",
+   "depends_on": [],
+   "model_bound": true,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": [
+     "json",
+     "png",
+     "pdf"
+    ]
+   }
+  },
+  {
+   "id": "DO-15",
+   "title": "Watch explainability signals in live use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "explainability-and-interpretability"
+   ],
+   "objective": "Explanations stay understandable and trustworthy in real use.",
+   "requirement": "Sample live explanations, check they are consistent, and review user feedback on them.",
+   "legal": [
+    "NIST AI RMF MEASURE 2.9",
+    "ISO 42001 9.1"
+   ],
+   "scenarios": [
+    "S-FAI-03",
+    "S-HUM-01"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A sample is reviewed regularly",
+    "Problems are logged"
+   ],
+   "evidence_types": [
+    "review notes"
+   ],
+   "valid_days": 180,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "DO-16",
+   "title": "Review alert thresholds and how alerts are handled",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability"
+   ],
+   "objective": "Monitoring stays useful, with neither silence nor noise.",
+   "requirement": "Review thresholds and alert handling at least twice a year and record changes.",
+   "legal": [
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 8.2",
+    "ISO 42001 9.1",
+    "ISO 42001 A.6.2.6",
+    "NIST AI RMF MEASURE 1.2",
+    "NIST AI RMF MEASURE 2.13"
+   ],
+   "scenarios": [
+    "S-ACC-02",
+    "S-REG-05"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A review is recorded",
+    "Changes are listed"
+   ],
+   "evidence_types": [
+    "review notes"
+   ],
+   "valid_days": 180,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-01",
+   "title": "Define human oversight: who reviews, when, with what power",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "safety"
+   ],
+   "objective": "A person can understand, question, override or stop the system where it matters.",
+   "requirement": "Define where a human checks or can override the system, who they are, what they can do, and when they must.",
+   "legal": [
+    "EU AI Act Art. 14",
+    "GDPR Art. 22",
+    "NIST AI RMF MANAGE 2",
+    "ISO 42001 A.9.2",
+    "EU AI Act Art. 26",
+    "NIST AI RMF GOVERN 3.2",
+    "NIST AI RMF MAP 2.2",
+    "NIST AI RMF MAP 3.5"
+   ],
+   "scenarios": [
+    "S-HUM-02",
+    "S-FAI-03"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "consequential_actions",
+     "safety_impact",
+     "customer_facing_automated"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Oversight points are written",
+    "Named reviewers have authority to override",
+    "Evidence shows reviews happen"
+   ],
+   "evidence_types": [
+    "oversight procedure",
+    "sample review records"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-02",
+   "title": "Train and equip the reviewers",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Reviewers can do the job well and have the time to do it.",
+   "requirement": "Make sure reviewers are trained on the system's limits, have the information they need and are not pushed to approve quickly.",
+   "legal": [
+    "EU AI Act Art. 14(4)",
+    "EU AI Act Art. 4",
+    "ISO 42001 7.2",
+    "ISO 42001 A.4.6",
+    "EU AI Act Art. 14",
+    "EU AI Act Art. 26",
+    "NIST AI RMF GOVERN 2.2",
+    "NIST AI RMF MAP 3.4",
+    "NIST AI RMF MAP 3.5",
+    "NIST AI RMF MEASURE 4.2"
+   ],
+   "scenarios": [
+    "S-HUM-01",
+    "S-HUM-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "consequential_actions",
+     "safety_impact",
+     "customer_facing_automated"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Reviewers are trained",
+    "Workload is reasonable"
+   ],
+   "evidence_types": [
+    "training record",
+    "workload note"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [
+    "HR-01"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-03",
+   "title": "Design the screen and process to avoid over-reliance",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "People keep checking instead of blindly trusting the AI.",
+   "requirement": "Show uncertainty, require a check for important results, and review whether people just accept everything.",
+   "legal": [
+    "EU AI Act Art. 14(4)(b)",
+    "NIST AI RMF MAP 3",
+    "EU AI Act Art. 14",
+    "NIST AI RMF GOVERN 3.2",
+    "NIST AI RMF GOVERN 4.1"
+   ],
+   "scenarios": [
+    "S-HUM-01"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Design measures are in place",
+    "Acceptance rates are reviewed"
+   ],
+   "evidence_types": [
+    "screenshots",
+    "acceptance-rate review"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-04",
+   "title": "Tell people when they are dealing with AI, and label AI content",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "People know when AI is involved.",
+   "requirement": "Tell users clearly that they are dealing with AI and mark AI-generated content where required.",
+   "legal": [
+    "EU AI Act Art. 50",
+    "NIST AI RMF MAP 3",
+    "ISO 42001 A.8.5"
+   ],
+   "scenarios": [
+    "S-HUM-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "customer_facing_automated",
+     "generative"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Notice is shown at first contact",
+    "Generated content is labelled"
+   ],
+   "evidence_types": [
+    "screenshots of the notice and label"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-05",
+   "title": "Explain in plain words what the system does and its limits",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "explainability-and-interpretability"
+   ],
+   "objective": "Users understand what to expect and not to expect.",
+   "requirement": "Provide user-facing text on purpose, limits, data use and how to get help.",
+   "legal": [
+    "EU AI Act Art. 13",
+    "NIST AI RMF MAP 3",
+    "ISO 42001 7.4",
+    "ISO 42001 A.8.2",
+    "ISO 42001 A.8.5",
+    "ISO 42001 A.10.4",
+    "EU AI Act Art. 50",
+    "NIST AI RMF MAP 2.2",
+    "NIST AI RMF MEASURE 2.8"
+   ],
+   "scenarios": [
+    "S-HUM-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Text is published",
+    "It was checked with real users or staff"
+   ],
+   "evidence_types": [
+    "published text"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-06",
+   "title": "Give people an explanation and a human review of decisions about them",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "explainability-and-interpretability",
+    "fairness"
+   ],
+   "objective": "People can find out why a decision was made and ask for a person to look again.",
+   "requirement": "Offer an explanation and a human review of any decision with legal or similar effect on a person.",
+   "legal": [
+    "EU AI Act Art. 86",
+    "GDPR Art. 22",
+    "NIST AI RMF MANAGE 2"
+   ],
+   "scenarios": [
+    "S-FAI-03"
+   ],
+   "type": "preventive",
+   "max_steps": 2,
+   "critical": true,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The right is described to people",
+    "A review route works within a stated time"
+   ],
+   "evidence_types": [
+    "description",
+    "sample cases"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-07",
+   "title": "Provide a way to appeal and contest",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "fairness"
+   ],
+   "objective": "A person who disagrees with an outcome can challenge it.",
+   "requirement": "Provide an appeal route with owner, response time and a record of outcomes.",
+   "legal": [
+    "NIST AI RMF MANAGE 4",
+    "EU AI Act Art. 86"
+   ],
+   "scenarios": [
+    "S-FAI-03",
+    "S-HUM-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people",
+     "customer_facing_automated"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The route is described to people",
+    "Response times are stated",
+    "Cases are logged"
+   ],
+   "evidence_types": [
+    "procedure",
+    "case log summary"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-08",
+   "title": "Offer a way to report problems",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Users and staff can report problems easily and get an answer.",
+   "requirement": "Give a clear, simple channel to report problems with the system and make sure someone responds.",
+   "legal": [
+    "NIST AI RMF MANAGE 4",
+    "EU AI Act Art. 26(5)",
+    "ISO 42001 A.3.3",
+    "ISO 42001 A.8.4",
+    "EU AI Act Art. 26",
+    "NIST AI RMF GOVERN 5.1",
+    "NIST AI RMF MEASURE 3.3",
+    "NIST AI RMF MANAGE 4.3"
+   ],
+   "scenarios": [
+    "S-HUM-05",
+    "S-REG-05"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The channel is visible",
+    "Reports reach a named person",
+    "Response times are stated"
+   ],
+   "evidence_types": [
+    "screenshot of the channel",
+    "example report and response"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-09",
+   "title": "Assess the safety impact before use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "safety"
+   ],
+   "objective": "Risks to physical or psychological safety are identified and reduced.",
+   "requirement": "Assess how the system could harm safety, and set measures and limits for each.",
+   "legal": [
+    "EU AI Act Art. 9",
+    "NIST AI RMF MAP 5",
+    "ISO 42001 6.1.4",
+    "NIST AI RMF MAP 3.2",
+    "NIST AI RMF MAP 5.1",
+    "NIST AI RMF MEASURE 2.6"
+   ],
+   "scenarios": [
+    "S-HUM-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": true,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "safety_impact"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Safety risks are listed",
+    "Each has a measure or limit"
+   ],
+   "evidence_types": [
+    "safety assessment"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-10",
+   "title": "Check the system is usable and fair for people with different needs",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "fairness"
+   ],
+   "objective": "People are not excluded by how the system is built.",
+   "requirement": "Check accessibility and fair access (language, disability, devices) and record gaps.",
+   "legal": [
+    "NIST AI RMF MAP 5",
+    "ISO 42001 A.5.4",
+    "NIST AI RMF GOVERN 3.1",
+    "NIST AI RMF MAP 1.6",
+    "NIST AI RMF MEASURE 2.2"
+   ],
+   "scenarios": [
+    "S-FAI-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "customer_facing_automated"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "An accessibility check was done",
+    "Gaps have a plan"
+   ],
+   "evidence_types": [
+    "check results"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-11",
+   "title": "Learn from appeals and complaints",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "fairness",
+    "accountability-and-transparency"
+   ],
+   "objective": "Patterns in complaints are noticed and acted on.",
+   "requirement": "Review appeals and complaints each quarter for patterns, and record actions.",
+   "legal": [
+    "NIST AI RMF MEASURE 4",
+    "ISO 42001 10.1",
+    "NIST AI RMF GOVERN 5.2",
+    "NIST AI RMF MEASURE 3.3",
+    "NIST AI RMF MANAGE 4.2"
+   ],
+   "scenarios": [
+    "S-FAI-03",
+    "S-HUM-05"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "decisions_about_people"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Quarterly reviews are recorded",
+    "Actions are tracked"
+   ],
+   "evidence_types": [
+    "review notes"
+   ],
+   "valid_days": 120,
+   "owner_role": "operations",
+   "depends_on": [
+    "HR-07"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-12",
+   "title": "Offer a human alternative where required",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "People who prefer or need a human can reach one.",
+   "requirement": "Provide a route to a human instead of the AI where the law or fairness calls for it.",
+   "legal": [
+    "GDPR Art. 22",
+    "NIST AI RMF MANAGE 2"
+   ],
+   "scenarios": [
+    "S-HUM-05",
+    "S-FAI-03"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "customer_facing_automated",
+     "decisions_about_people"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A human route exists",
+    "It is explained to users"
+   ],
+   "evidence_types": [
+    "description",
+    "screenshot"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "HR-13",
+   "title": "Set a misuse policy and a way to report abuse",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "security-and-resiliency",
+    "safety"
+   ],
+   "objective": "Users know what is not allowed and abuse can be reported.",
+   "requirement": "Publish what users must not do and let people report abuse; act on reports.",
+   "legal": [
+    "NIST AI RMF MANAGE 2",
+    "ISO 42001 A.3.3"
+   ],
+   "scenarios": [
+    "S-SEC-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "generative",
+     "customer_facing_automated"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Policy is published",
+    "A report route exists"
+   ],
+   "evidence_types": [
+    "policy",
+    "route screenshot"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-01",
+   "title": "Check the decision journal is intact",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "The record of decisions has not been altered.",
+   "requirement": "Every quarter, run the journal integrity check and send the result.",
+   "legal": [
+    "EU AI Act Art. 12",
+    "ISO 42001 7.5",
+    "ISO 42001 9.2"
+   ],
+   "scenarios": [
+    "S-REG-02"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The check passed or breaks were explained"
+   ],
+   "evidence_types": [
+    "output of the journal check"
+   ],
+   "valid_days": 100,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [
+     "the AIGRCeler journal verify command"
+    ],
+    "howto": "Ask AIGRCeler to run the journal check and send you the result.",
+    "formats": [
+     "md",
+     "json"
+    ]
+   }
+  },
+  {
+   "id": "EA-02",
+   "title": "Keep evidence for the required period",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Evidence is kept as long as the law and your rules require.",
+   "requirement": "Apply and document the retention period (10 years full lane, 7 standard, 5 light by default) and where evidence is stored.",
+   "legal": [
+    "EU AI Act Art. 18",
+    "EU AI Act Art. 19",
+    "ISO 42001 7.5",
+    "ISO 42001 A.5.3",
+    "EU AI Act Art. 17"
+   ],
+   "scenarios": [
+    "S-REG-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "light",
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "The period is written and applied",
+    "Storage is protected and backed up"
+   ],
+   "evidence_types": [
+    "retention rule",
+    "storage settings evidence"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-03",
+   "title": "Assemble the technical documentation pack",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "A regulator or auditor can see how the system was built and governed.",
+   "requirement": "Assemble the technical documentation (design, data, testing, risk management, oversight, changes) in one place.",
+   "legal": [
+    "EU AI Act Art. 11",
+    "EU AI Act Annex IV",
+    "ISO 42001 7.5",
+    "ISO 42001 A.4.2",
+    "ISO 42001 A.6.2.3",
+    "ISO 42001 A.6.2.7",
+    "NIST AI RMF GOVERN 4.2",
+    "NIST AI RMF MEASURE 2.8"
+   ],
+   "scenarios": [
+    "S-REG-02",
+    "S-REG-01"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": true,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "All required sections are present",
+    "It is current"
+   ],
+   "evidence_types": [
+    "documentation pack index"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-04",
+   "title": "Keep automatic records of system use",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Use can be reconstructed afterwards.",
+   "requirement": "Keep automatic records of events for the required period and protect them.",
+   "legal": [
+    "EU AI Act Art. 12",
+    "EU AI Act Art. 19",
+    "EU AI Act Art. 26(6)",
+    "ISO 42001 A.6.2.8",
+    "EU AI Act Art. 26"
+   ],
+   "scenarios": [
+    "S-REG-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Records are kept for the period",
+    "Access to them is limited"
+   ],
+   "evidence_types": [
+    "settings evidence"
+   ],
+   "valid_days": 365,
+   "owner_role": "engineering-data-science",
+   "depends_on": [
+    "DO-06"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-05",
+   "title": "Audit the AI governance program yearly",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Someone checks that the program does what it says.",
+   "requirement": "Once a year, audit a sample of controls, evidence and decisions, and report findings to leadership.",
+   "legal": [
+    "ISO 42001 9.2",
+    "NIST AI RMF GOVERN 1",
+    "NIST AI RMF GOVERN 1.5",
+    "NIST AI RMF MEASURE 1.3",
+    "NIST AI RMF MEASURE 2.13"
+   ],
+   "scenarios": [
+    "S-REG-02"
+   ],
+   "type": "detective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "An audit report exists",
+    "Findings have owners"
+   ],
+   "evidence_types": [
+    "audit report"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-06",
+   "title": "Be ready to answer a regulator",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Questions from a regulator get a fast, complete answer.",
+   "requirement": "Name who deals with regulators, where evidence is, and how quickly you can produce it.",
+   "legal": [
+    "EU AI Act Art. 73",
+    "NIST AI RMF GOVERN 1",
+    "ISO 42001 A.8.3",
+    "EU AI Act Art. 21",
+    "NIST AI RMF GOVERN 1.1"
+   ],
+   "scenarios": [
+    "S-REG-05",
+    "S-REG-02"
+   ],
+   "type": "corrective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A contact is named",
+    "A trial request was answered in the stated time"
+   ],
+   "evidence_types": [
+    "procedure",
+    "trial result"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-07",
+   "title": "Plan monitoring after the system is on the market",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "validity-and-reliability",
+    "accountability-and-transparency"
+   ],
+   "objective": "Real-world performance is tracked for the life of the system.",
+   "requirement": "Write a post-market monitoring plan with what is measured, how often and who reviews it.",
+   "legal": [
+    "EU AI Act Art. 72",
+    "NIST AI RMF MANAGE 4.1"
+   ],
+   "scenarios": [
+    "S-ACC-02",
+    "S-REG-05"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "full"
+    ],
+    "requires_flags": [
+     "eu_high_risk"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Plan exists",
+    "It matches the controls in place"
+   ],
+   "evidence_types": [
+    "monitoring plan"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [
+    "DO-01"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-08",
+   "title": "Be ready to report serious incidents to authorities",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency",
+    "safety"
+   ],
+   "objective": "Serious incidents reach the authority in time.",
+   "requirement": "Prepare contacts, templates and timelines for reporting serious incidents.",
+   "legal": [
+    "EU AI Act Art. 73",
+    "ISO 42001 A.8.3",
+    "ISO 42001 A.8.4",
+    "NIST AI RMF MANAGE 4.3"
+   ],
+   "scenarios": [
+    "S-REG-05"
+   ],
+   "type": "corrective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [
+     "eu_high_risk",
+     "regulated_sector"
+    ],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Templates and contacts exist",
+    "Timelines are written"
+   ],
+   "evidence_types": [
+    "reporting kit"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [
+    "DO-07"
+   ],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-09",
+   "title": "Give deployers and users the information they need",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "Those who rely on your system get the documentation required.",
+   "requirement": "Provide instructions for use, limits and contact details to users and deployers.",
+   "legal": [
+    "EU AI Act Art. 13",
+    "EU AI Act Art. 16",
+    "ISO 42001 7.4",
+    "ISO 42001 A.8.2",
+    "ISO 42001 A.8.5",
+    "ISO 42001 A.9.4",
+    "ISO 42001 A.10.4",
+    "NIST AI RMF MAP 2.2",
+    "NIST AI RMF MANAGE 4.3"
+   ],
+   "scenarios": [
+    "S-REG-02"
+   ],
+   "type": "preventive",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "built-in-house",
+     "adapted-from-third-party-base"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "Instructions exist",
+    "They reach the audience"
+   ],
+   "evidence_types": [
+    "instructions",
+    "distribution proof"
+   ],
+   "valid_days": 365,
+   "owner_role": "legal-compliance",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  },
+  {
+   "id": "EA-10",
+   "title": "Write a short lessons-learned note after each incident and each yearly review",
+   "status": "active",
+   "version": "1.0",
+   "trust_properties": [
+    "accountability-and-transparency"
+   ],
+   "objective": "The program learns and gets better.",
+   "requirement": "After each incident and each annual review, record what was learned and what changes in controls.",
+   "legal": [
+    "ISO 42001 10",
+    "NIST AI RMF MANAGE 4",
+    "ISO 42001 8.3",
+    "ISO 42001 10.1",
+    "ISO 42001 10.2",
+    "EU AI Act Art. 20",
+    "NIST AI RMF GOVERN 4.3",
+    "NIST AI RMF MEASURE 4.3",
+    "NIST AI RMF MANAGE 4.2"
+   ],
+   "scenarios": [
+    "S-REG-02",
+    "S-REG-05"
+   ],
+   "type": "corrective",
+   "max_steps": 1,
+   "critical": false,
+   "launch_required": false,
+   "applies": {
+    "modes": [
+     "any"
+    ],
+    "lanes": [
+     "standard",
+     "full"
+    ],
+    "requires_flags": [],
+    "excludes_flags": []
+   },
+   "acceptance": [
+    "A note exists for each event",
+    "Changes are traced to the catalog"
+   ],
+   "evidence_types": [
+    "lessons-learned notes"
+   ],
+   "valid_days": 365,
+   "owner_role": "operations",
+   "depends_on": [],
+   "model_bound": false,
+   "playbook": {
+    "tools": [],
+    "howto": "",
+    "formats": []
+   }
+  }
+ ]
+}

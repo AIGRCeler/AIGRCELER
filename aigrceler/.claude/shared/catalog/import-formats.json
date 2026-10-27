@@ -1,0 +1,73 @@
+{
+  "formats": [
+    {
+      "id": "sarif",
+      "parser": "sarif",
+      "description": "Code and dependency scan results (SARIF 2.1). The tool reads findings by severity.",
+      "tools_known": [
+        "Semgrep",
+        "CodeQL",
+        "Bandit",
+        "Trivy",
+        "Snyk Code"
+      ]
+    },
+    {
+      "id": "json",
+      "parser": "json",
+      "description": "Test or monitoring results as JSON. The tool records structure and fingerprint; the Verifier reads the content.",
+      "tools_known": [
+        "garak",
+        "promptfoo",
+        "PyRIT",
+        "MLflow",
+        "Evidently",
+        "Adversarial Robustness Toolbox",
+        "SHAP exports"
+      ]
+    },
+    {
+      "id": "csv",
+      "parser": "csv",
+      "description": "Tables of results. The tool records columns and row count.",
+      "tools_known": [
+        "Fairlearn",
+        "Aequitas",
+        "Great Expectations exports",
+        "AIF360"
+      ]
+    },
+    {
+      "id": "pdf",
+      "parser": "opaque",
+      "description": "Reports and documents. Fingerprinted and read by the Verifier; no automatic parsing.",
+      "tools_known": [
+        "any"
+      ]
+    },
+    {
+      "id": "docx",
+      "parser": "opaque",
+      "description": "Word documents: policies, minutes, plans. Fingerprinted and read by the Verifier.",
+      "tools_known": [
+        "any"
+      ]
+    },
+    {
+      "id": "md",
+      "parser": "opaque",
+      "description": "Text and Markdown documents.",
+      "tools_known": [
+        "any"
+      ]
+    },
+    {
+      "id": "png",
+      "parser": "opaque",
+      "description": "Screenshots (settings, dashboards). Fingerprinted and read by the Verifier.",
+      "tools_known": [
+        "any"
+      ]
+    }
+  ]
+}
